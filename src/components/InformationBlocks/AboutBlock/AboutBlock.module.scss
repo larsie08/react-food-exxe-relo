@@ -1,0 +1,41 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+
+  &__header {
+    display: flex;
+    margin-bottom: 60px;
+
+    .block__header {
+      font-size: 20px;
+      text-transform: uppercase;
+      line-height: 140%;
+      font-weight: 700;
+      margin-right: 30px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      margin: 0 150px;
+      font-size: 64px;
+      line-height: 120%;
+      font-weight: 700;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 140%;
+      font-weight: 400;
+    }
+  }
+
+  .line {
+    display: inline-flex;
+    align-items: center;
+  }
+}
