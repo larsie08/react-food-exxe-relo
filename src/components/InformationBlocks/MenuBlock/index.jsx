@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './MenuBlock.module.scss';
 
@@ -27,11 +28,13 @@ const MenuBlock = () => {
       <div className={styles.menu__footer}>
         <div className={styles.menu__block}>
           <div className={styles.block__img}>
-            <img alt="menu" src="./img/menu_1.png" />
+            <Link to="menu">
+              <img alt="menu" src="./img/menu_1.png" />
+            </Link>
           </div>
           <div className={styles.block__footer}>
             <h1 className={styles.block__header}>Основное меню</h1>
-            <div className={styles.line}  >
+            <div className={styles.line}>
               <img alt="underline" src="./img/underline.jpg" />
             </div>
           </div>
@@ -42,7 +45,7 @@ const MenuBlock = () => {
           </div>
           <div className={styles.block__footer}>
             <h1 className={styles.block__header}>Барная карта</h1>
-            <div className={styles.line}  >
+            <div className={styles.line}>
               <img alt="underline" src="./img/underline.jpg" />
             </div>
           </div>

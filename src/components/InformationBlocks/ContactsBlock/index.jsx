@@ -1,8 +1,12 @@
 import React from 'react';
 
+import { AppContext } from '../../../App';
+
 import styles from './ContactsBlock.module.scss';
 
 const ContactsBlock = () => {
+  const {setIsOpen} = React.useContext(AppContext);
+
   return (
     <div className={styles.contacts}>
       <div className={styles.contacts__header}>
@@ -89,10 +93,10 @@ const ContactsBlock = () => {
             </div>
             <div className={styles.information__block__footer}>
               <ul className={styles.list__btn}>
-                <li>
-                  <a href="/" className={styles.active_btn}>
+                <li onClick={() => setIsOpen(true)}>
+                  <button href="/" className={styles.active_btn}>
                     Бронь столика
-                  </a>
+                  </button>
                 </li>
                 <li className={styles.list__btn__right}>
                   <a href="/">

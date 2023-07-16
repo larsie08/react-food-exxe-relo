@@ -22,7 +22,7 @@ ol {
   &__link {
     margin-right: 25px;
   }
-  
+
   a {
     font-weight: 400;
     font-size: 16px;
@@ -34,10 +34,11 @@ ol {
     font-weight: 700;
     line-height: 140%;
     text-align: center;
-    background-color: #B59571;
+    background-color: #b59571;
     color: white;
     text-decoration: none;
     padding: 15px 30px;
+    border: 0;
     min-width: 150px;
   }
 }

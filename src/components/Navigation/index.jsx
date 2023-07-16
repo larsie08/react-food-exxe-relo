@@ -1,13 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import { AppContext } from '../../App';
+
 
 import styles from './Navigation.module.scss'
 
 const Navigation = () => {
+  const {setIsOpen} = React.useContext(AppContext);
+
   return (
     <nav className={styles.nav}>
       <ul className={styles.nav__list}>
         <li className={styles.nav__link}>
-          <a href='/'>Меню</a>
+          <Link to='menu'>Меню</Link>
         </li>
         <li className={styles.nav__link}>
           <a href='/'>Доставка</a>
@@ -15,8 +21,8 @@ const Navigation = () => {
         <li className={styles.nav__link}>
           <a href='/'>Оплата</a>
         </li>
-        <li className={styles.nav__link}>
-          <a href='/' className={styles.active}>Бронь столика</a>
+        <li onClick={() => setIsOpen(true)} className={styles.nav__link}>
+          <button className={styles.active}>Бронь столика</button>
         </li>
       </ul>
     </nav>

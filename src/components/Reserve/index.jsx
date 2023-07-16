@@ -1,41 +1,43 @@
 import React from 'react';
 
+import { AppContext } from '../../App';
+
+import styles from './Reserve.module.scss';
+
 const Reserve = () => {
+  const { setIsOpen } = React.useContext(AppContext);
+
   return (
-    <div class="rezerv-modal">
-      <div class="rezerv-modal__close close-modal">
-        <a href="/" class="rezerv__close">
-          <img alt="close" src="/assets/img/close.png" />
-        </a>
-      </div>
-      <div class="rezerv-modal__logo">
-        <a href="/" class="rezerv__logo">
-          <img alt="logo" src="/assets/img/logo.png" />
-        </a>
-      </div>
-      <div class="rezerv-modal__title">
-        <h4>Забронировать столик</h4>
-      </div>
-      <form class="rezerv-modal__form">
-        <label class="name-label form-label">
-          <input type="text" placeholder="Имя" class="input" />
-        </label>
-        <label class="tel-label form-label">
-          <input type="tel" placeholder="Телефон" class="input" />
-        </label>
-        <div class="block__form">
-          <label class="number-label form-label">
-            <input type="number" placeholder="Гостей" class="input block-input__left" />
-          </label>
-          <label class="time-label form-label">
-            <input type="number" placeholder="Время" class="input block-input__right" />
-          </label>
+    <div className={styles.reserve}>
+      <div className={styles.reserve__content}>
+        <div onClick={() => setIsOpen(false)} className={styles.reserve__content__close}>
+          <img alt="close" src="./img/close.png" />
         </div>
-      </form>
-      <div class="rezerv-modal__footer">
-        <a href="/" class="rezerv__button">
-          Забронировать
-        </a>
+        <div className={styles.reserve__content__logo}>
+          <img alt="logo" src="./img/logo.png" />
+        </div>
+        <div className={styles.reserve__content__title}>
+          <h4>Забронировать столик</h4>
+        </div>
+        <form className={styles.reserve__content__form}>
+          <div className={styles.form__name}>
+            <input type="text" placeholder="Имя" />
+          </div>
+          <div className={styles.form__tel}>
+            <input type="tel" placeholder="Телефон" />
+          </div>
+          <div className={styles.form__block}>
+            <div className={styles.form__visitors}>
+              <input type="number" placeholder="Гостей" />
+            </div>
+            <div className={styles.form__time}>
+              <input type="number" placeholder="Время" />
+            </div>
+          </div>
+        </form>
+        <div className={styles.reserve__content__footer}>
+          <button>Забронировать</button>
+        </div>
       </div>
     </div>
   );
