@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 70px 0 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 280px;
+    gap: 10px;
+
+    &__account {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      a {
+        font-size: 16px;
+        line-height: 140%;
+        font-weight: 400;
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    &__cart {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+}

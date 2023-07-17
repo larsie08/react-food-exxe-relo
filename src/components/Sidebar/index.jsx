@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { AppContext } from '../../App';
+
 import styles from './Sidebar.module.scss';
 
 const Sidebar = () => {
+  const {setIsOpenBurger} = React.useContext(AppContext);
 
   return (
     <aside className={styles.sidebar}>
@@ -13,7 +16,7 @@ const Sidebar = () => {
             <img alt="icons" src="./img/logo.png" />
           </Link>
         </li>
-        <li className={styles.sidebar__menu}>
+        <li onClick={() => setIsOpenBurger(true)} className={styles.sidebar__menu}>
           <img alt="icons" src="./img/gg_menu-left.png" />
         </li>
       </ul>

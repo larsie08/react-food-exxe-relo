@@ -1,0 +1,72 @@
+.food_card {
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 24px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+
+    img {
+      width: 100%;
+    }
+
+    &__title {
+      text-align: center;
+      margin: 50px 0;
+
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 140%;
+    }
+
+    &__price_block {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-bottom: 30px;
+
+      h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 120%;
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px;
+        width: 120px;
+        white-space: nowrap;
+        border: 0;
+        color: white;
+        padding: 10px 20px;
+        background-color: #b59571;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%;
+
+        transition: background-color ease 0.5s, color ease 0.5s;
+      }
+
+      .active-btn {
+        transition: background-color ease .5s, color ease .5s;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+    .food_card {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

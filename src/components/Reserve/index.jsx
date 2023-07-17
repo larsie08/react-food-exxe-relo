@@ -1,16 +1,19 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import { AppContext } from '../../App';
 
 import styles from './Reserve.module.scss';
 
 const Reserve = () => {
-  const { setIsOpen } = React.useContext(AppContext);
+  const {isOpenModal ,setIsOpenModal } = React.useContext(AppContext);
 
-  return (
+  if(!isOpenModal) return null
+
+  return ReactDOM.createPortal(
     <div className={styles.reserve}>
       <div className={styles.reserve__content}>
-        <div onClick={() => setIsOpen(false)} className={styles.reserve__content__close}>
+        <div onClick={() => setIsOpenModal(false)} className={styles.reserve__content__close}>
           <img alt="close" src="./img/close.png" />
         </div>
         <div className={styles.reserve__content__logo}>
@@ -39,7 +42,8 @@ const Reserve = () => {
           <button>Забронировать</button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.getElementById('portal')
   );
 };
 
