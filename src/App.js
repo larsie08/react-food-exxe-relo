@@ -13,21 +13,8 @@ function App() {
   const [isOpenModal, setIsOpenModal] = React.useState(false);
   const [isOpenBurger, setIsOpenBurger] = React.useState(false);
 
-  function closeModal(e) {
-    if (e.keyCode === 27) {
-      setIsOpenModal(false);
-    }
-  }
-
-  function closeBurger(e) {
-    if (e.keyCode === 27) {
-      setIsOpenBurger(false);
-    }
-  }
-
-
   return (
-    <AppContext.Provider value={{ isOpenModal, isOpenBurger ,setIsOpenBurger, setIsOpenModal , closeModal, closeBurger }}>
+    <AppContext.Provider value={{ isOpenModal, isOpenBurger ,setIsOpenBurger, setIsOpenModal }}>
       <Sidebar />
       <Routes>
         <Route path="/" element={<Home />}></Route>

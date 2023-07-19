@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import NavigationMenu from '../../components/MenuComponents/NavigationMenu';
 import Categories from '../../components/MenuComponents/Categories';
@@ -10,17 +11,36 @@ import styles from './Menu.module.scss';
 
 const Menu = () => {
   const [categoryId, setCategoryId] = React.useState(0);
+  const [items, setItems] = React.useState([]);
+
+  React.useEffect(() => {
+    async function fetchData() {
+      try {
+        const itemsResponse = await axios.get('http://localhost:4000/items');
+
+        setItems(itemsResponse.data);
+      } catch (err) {
+        alert('Ошибка при запросе данных ;(');
+        console.log(err);
+      }
+    }
+
+    fetchData();
+  }, []);
 
   return (
     <div className={styles.wrapper}>
       <NavigationMenu />
       <div className={styles.container}>
         <Categories value={categoryId} setCategoryId={setCategoryId} />
-        <FoodCard />
-
-        {/* <ContactsBlock /> */}
+        <div className={styles.food_card__wrapper}>
+          {items.map((item, id) => (
+            <FoodCard key={id} title={item.title} imageUrl={item.imageUrl} price={item.price} />
+          ))}
+        </div>
+        <ContactsBlock />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
