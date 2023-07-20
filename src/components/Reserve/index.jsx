@@ -6,9 +6,9 @@ import { AppContext } from '../../App';
 import styles from './Reserve.module.scss';
 
 const Reserve = () => {
-  const {isOpenModal ,setIsOpenModal } = React.useContext(AppContext);
+  const { isOpenModal, setIsOpenModal } = React.useContext(AppContext);
 
-  if(!isOpenModal) return null
+  if (!isOpenModal) return null;
 
   return ReactDOM.createPortal(
     <div className={styles.reserve}>
@@ -43,7 +43,7 @@ const Reserve = () => {
         </div>
       </div>
     </div>,
-    document.getElementById('portal')
+    document.getElementById('portal'),
   );
 };
 

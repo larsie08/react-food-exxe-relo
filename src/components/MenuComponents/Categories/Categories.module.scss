@@ -17,6 +17,7 @@
 
       &__active {
         border-bottom: 3px solid;
+        padding-bottom: 5px;
         border-color: rgb(181, 149, 113);
         transition: border-color ease 0.4s;
       }

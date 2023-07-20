@@ -9,3 +9,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.reserve-enter {
+  opacity: 0;
+}
+
+.reserve-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.reserve-exit {
+  opacity: 1;
+}
+
+.reserve-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.burger-enter {
+  width: 0;
+}
+
+.burger-active {
+  width: 100%;
+  transition: width 300ms;
+}
+
+.burger-exit {
+  width: 100%;
+}
+
+.burger-active {
+  width: 0;
+  transition: width 300ms;
+}

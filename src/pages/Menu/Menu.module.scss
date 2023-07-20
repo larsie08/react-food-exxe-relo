@@ -13,4 +13,16 @@
     grid-template-rows: 1fr 1fr 1fr;
     gap: 24px;
   }
+
+  @media (max-width: 1300px) {
+    .food_card__wrapper {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 1150px) {
+    .food_card__wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 }

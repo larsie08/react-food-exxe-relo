@@ -13,6 +13,17 @@ const Footer = () => {
         </li>
       </ul>
       <h4>Политика конфиденциальности</h4>
+      {/* <ul class={styles.block_card}>
+        <li>
+          <img alt='visa' src="./img/visa-card.png" />
+        </li>
+        <li>
+          <img alt='mir' src="./img/mir-card.png" />
+        </li>
+        <li>
+          <img alt='master-card' src="./img/masterCard.png" />
+        </li>
+      </ul> */}
       <h5>Дизайн d-e-n.ru</h5>
     </footer>
   );

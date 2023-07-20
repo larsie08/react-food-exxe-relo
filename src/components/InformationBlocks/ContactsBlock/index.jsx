@@ -5,7 +5,7 @@ import { AppContext } from '../../../App';
 import styles from './ContactsBlock.module.scss';
 
 const ContactsBlock = () => {
-  const {setIsOpenModal} = React.useContext(AppContext);
+  const { setIsOpenModal } = React.useContext(AppContext);
 
   return (
     <div className={styles.contacts}>
@@ -93,15 +93,11 @@ const ContactsBlock = () => {
             </div>
             <div className={styles.information__block__footer}>
               <ul className={styles.list__btn}>
-                <li onClick={() => setIsOpenModal(true)}>
-                  <button href="/" className={styles.active_btn}>
-                    Бронь столика
-                  </button>
+                <li onClick={() => setIsOpenModal(true)} className={styles.list__btn__left}>
+                  <button className={styles.active_btn}>Бронь столика</button>
                 </li>
                 <li className={styles.list__btn__right}>
-                  <a href="/">
-                    Задать вопрос
-                  </a>
+                  <button>Задать вопрос</button>
                 </li>
               </ul>
             </div>
