@@ -32,8 +32,8 @@ code {
   width: 0;
 }
 
-.burger-active {
-  width: 100%;
+.burger-enter-active {
+  width: 50%;
   transition: width 300ms;
 }
 
@@ -41,7 +41,7 @@ code {
   width: 100%;
 }
 
-.burger-active {
+.burger-exit-active {
   width: 0;
   transition: width 300ms;
 }

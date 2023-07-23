@@ -1,8 +1,11 @@
-import React from 'react';
+import React from "react";
+import { useLocation } from "react-router-dom";
 
-import styles from './Footer.module.scss';
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
+  const location = useLocation();
+
   return (
     <footer className={styles.footer}>
       <ul className="page-footer__link">
@@ -13,17 +16,21 @@ const Footer = () => {
         </li>
       </ul>
       <h4>Политика конфиденциальности</h4>
-      {/* <ul class={styles.block_card}>
-        <li>
-          <img alt='visa' src="./img/visa-card.png" />
-        </li>
-        <li>
-          <img alt='mir' src="./img/mir-card.png" />
-        </li>
-        <li>
-          <img alt='master-card' src="./img/masterCard.png" />
-        </li>
-      </ul> */}
+      {location.pathname === "/menu" ? (
+        <ul className={styles.block_card}>
+          <li>
+            <img alt="visa" src="./img/visa-card.png" />
+          </li>
+          <li>
+            <img alt="mir" src="./img/mir-card.png" />
+          </li>
+          <li>
+            <img alt="master-card" src="./img/masterCard.png" />
+          </li>
+        </ul>
+      ) : (
+        ""
+      )}
       <h5>Дизайн d-e-n.ru</h5>
     </footer>
   );

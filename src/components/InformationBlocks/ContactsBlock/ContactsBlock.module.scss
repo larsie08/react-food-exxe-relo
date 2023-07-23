@@ -74,6 +74,8 @@
   }
 
   .information {
+    height: 100%;
+    width: 100%;
     box-sizing: content-box;
     display: inline-flex;
     align-items: center;
@@ -269,9 +271,23 @@
   .information__block {
     height: 450px !important;
   }
+}
 
+@media (min-width: 1000px) and (max-width: 1300px) {
   .background {
     height: 450px !important;
     width: 500px !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .background {
+    height: 420px !important;
+    width: 400px !important;
+  }
+
+  .information__block {
+    height: 430px !important;
+    width: 450px !important;
   }
 }
