@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-food-exxe-relo/static/css/main.e3aee2f4.css",
+    "main.js": "/react-food-exxe-relo/static/js/main.d8c2f1c4.js",
+    "index.html": "/react-food-exxe-relo/index.html",
+    "main.e3aee2f4.css.map": "/react-food-exxe-relo/static/css/main.e3aee2f4.css.map",
+    "main.d8c2f1c4.js.map": "/react-food-exxe-relo/static/js/main.d8c2f1c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3aee2f4.css",
+    "static/js/main.d8c2f1c4.js"
+  ]
+}
