@@ -1,21 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+
+import classNames from 'classnames';
 
 import { AppContext } from '../../App';
 
 import styles from './MenuBurger.module.scss';
 
 const MenuBurger = () => {
-    const {setIsOpenBurger, setIsOpenModal} = React.useContext(AppContext);
+  const { isOpenBurger, setIsOpenBurger, setIsOpenModal } = React.useContext(AppContext);
 
-  return (
-    <div className={styles.menu_burger}>
-      <div className={styles.menu_burger__content}>
-        <ul className={styles.menu_burger__content__header}>
-          <li onClick={() => setIsOpenBurger(false)} className={styles.logo}>
+  return ReactDOM.createPortal (
+    <div className={classNames(styles.menu_burger, { [styles.menu_burger__active]: isOpenBurger })}>
+      <div
+        className={classNames(styles.menu_burger__content, {
+          [styles.menu_burger__content__active]: isOpenBurger,
+        })}>
+        <ul onClick={() => setIsOpenBurger(false)} className={styles.menu_burger__content__header}>
+          <li className={styles.logo}>
             <img alt="logo" src="./img/logo.png" />
           </li>
-          <li onClick={() => setIsOpenBurger(false)}>
+          <li>
             <img alt="close" src="./img/mini-close.png" />
           </li>
         </ul>
@@ -32,7 +38,9 @@ const MenuBurger = () => {
               <a href="/">Оплата</a>
             </li>
             <li>
-              <button onClick={() => setIsOpenModal(true)} href="/">Бронь столика</button>
+              <button onClick={() => setIsOpenModal(true)} href="/">
+                Бронь столика
+              </button>
             </li>
           </ul>
         </div>
@@ -51,7 +59,8 @@ const MenuBurger = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </div>,
+    document.getElementById('portal'),
   );
 };
 

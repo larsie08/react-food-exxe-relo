@@ -7,7 +7,7 @@ import AboutBlock from '../../components/InformationBlocks/AboutBlock';
 import MenuBlock from '../../components/InformationBlocks/MenuBlock';
 import DeliveryBlock from '../../components/InformationBlocks/DeliveryBlock';
 import ContactsBlock from '../../components/InformationBlocks/ContactsBlock';
-import Footer from '../../components/Footer';
+import {Footer} from '../../components/Footer';
 
 const Home = () => {
   return (

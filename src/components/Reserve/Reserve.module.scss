@@ -1,4 +1,6 @@
 .reserve {
+  visibility: hidden;
+  opacity: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
@@ -6,6 +8,13 @@
   z-index: 5;
   top: 0;
   left: 0;
+
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+  &__active {
+    visibility: visible;
+    opacity: 1;
+  }
 
   &__content {
     display: flex;

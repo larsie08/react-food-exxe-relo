@@ -1,19 +1,28 @@
 .menu_burger {
   position: fixed;
   height: 100%;
-  width: 100%;
+  width: 0;
   top: 0;
   left: 0;
-  z-index: 4;
   background-color: #333333;
+  transition: 0.3s linear;
+
+  &__active {
+    width: 100%;
+    z-index: 4;
+  }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    margin: 0 auto;
+    display: none;
+
+    &__active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      margin: 0 auto;
+    }
 
     &__header {
       display: flex;

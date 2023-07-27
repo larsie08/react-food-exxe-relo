@@ -4,7 +4,7 @@ import axios from 'axios';
 import NavigationMenu from '../../components/MenuComponents/NavigationMenu';
 import Categories from '../../components/MenuComponents/Categories';
 import ContactsBlock from '../../components/InformationBlocks/ContactsBlock';
-import Footer from '../../components/Footer';
+import { Footer } from '../../components/Footer';
 import FoodCard from '../../components/MenuComponents/FoodCard';
 
 import styles from './Menu.module.scss';
@@ -16,7 +16,7 @@ const Menu = () => {
   React.useEffect(() => {
     async function fetchData() {
       try {
-        const itemsResponse = await axios.get('http://localhost:4000/items');
+        const itemsResponse = await axios.get('https://64c180cafa35860baea09f01.mockapi.io/items');
 
         setItems(itemsResponse.data);
       } catch (err) {
@@ -40,7 +40,7 @@ const Menu = () => {
         </div>
         <ContactsBlock />
       </div>
-      <Footer />
+      <Footer renderMenu={true} />
     </div>
   );
 };

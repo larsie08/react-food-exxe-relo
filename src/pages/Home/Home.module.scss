@@ -10,7 +10,6 @@
   height: 100%;
   width: 80%;
   max-width: 1400px;
-  margin-left: 120px !important;
   margin: 0 auto;
 
   .main {
@@ -37,4 +36,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (max-width: 1150px) {
+  .container {
+    margin-left: 120px;
+  }
 }

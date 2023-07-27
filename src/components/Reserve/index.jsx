@@ -4,19 +4,21 @@ import ReactDOM from 'react-dom';
 import { AppContext } from '../../App';
 
 import styles from './Reserve.module.scss';
+import classNames from 'classnames';
 
 const Reserve = () => {
   const { isOpenModal, setIsOpenModal } = React.useContext(AppContext);
 
-  if (!isOpenModal) return null;
-
   return ReactDOM.createPortal(
-    <div className={styles.reserve}>
-      <div className={styles.reserve__content}>
+    <div className={classNames(styles.reserve, { [styles.reserve__active]: isOpenModal })}>
+      <div
+        className={classNames(styles.reserve__content, {
+          [styles.reserve__content__active]: isOpenModal,
+        })}>
         <div onClick={() => setIsOpenModal(false)} className={styles.reserve__content__close}>
           <img alt="close" src="./img/close.png" />
         </div>
-        <div className={styles.reserve__content__logo}>
+        <div onClick={() => setIsOpenModal(false)} className={styles.reserve__content__logo}>
           <img alt="logo" src="./img/logo.png" />
         </div>
         <div className={styles.reserve__content__title}>
