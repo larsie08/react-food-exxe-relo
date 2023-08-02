@@ -23,19 +23,19 @@ const Sidebar = () => {
 
       <ul className={styles.sidebar_content__footer}>
         <li>
-          <a href="/" className={styles.icons}>
+          <Link to="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={styles.icons}>
             <img alt="icons" src="./img/yt-icons.png" />
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/" className={styles.icons}>
+          <Link to="https://vk.com" className={styles.icons}>
             <img alt="icons" src="./img/vk-icons.png" />
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/" className={styles.icons}>
+          <Link to="https://telegram.org" className={styles.icons}>
             <img alt="icons" src="./img/tg-icons.png" />
-          </a>
+          </Link>
         </li>
       </ul>
     </aside>

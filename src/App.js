@@ -12,7 +12,6 @@ export const AppContext = React.createContext();
 function App() {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isOpenBurger, setIsOpenBurger] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     const body = document.querySelector('body');
