@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 
 import styles from './NavigationMenu.module.scss';
-import { MenuContext } from '../../../pages/Menu';
+import { AppContext } from '../../../App';
 
 const NavigationMenu = () => {
-  const { cartItems } = useContext(MenuContext);
+  const { cartItems } = useContext(AppContext);
+
+  console.log(cartItems)
 
   const totalPrice = cartItems.reduce((sum, obj) => obj.price + sum, 0);
 
@@ -14,12 +16,12 @@ const NavigationMenu = () => {
         <li className={styles.header__content__account}>
           <a href="/">Личный кабинет</a>
           <a href="/">
-            <img alt="account" src="./img/account.png" />
+            <img alt="account" src="/img/account.png" />
           </a>
         </li>
         <li className={styles.header__content__cart}>
           <a href="/">
-            <img alt="cart" src="./img/shopping-basket.png" />
+            <img alt="cart" src="/img/shopping-basket.png" />
           </a>
           <span>{totalPrice} ₽</span>
         </li>

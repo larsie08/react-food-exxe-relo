@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { AppContext } from '../../../App';
 
 import styles from './Categories.module.scss';
 
-const Categories = ({ value, setCategoryId }) => {
+const Categories = () => {
+  const { categoryId, setCategoryId } = useContext(AppContext);
+
   const categories = [
     'Завтраки',
     'Raw',
@@ -27,7 +31,7 @@ const Categories = ({ value, setCategoryId }) => {
             key={i}
             onClick={() => setCategoryId(i)}
             className={
-              value === i
+              categoryId === i
                 ? styles.categories__content__btn__active
                 : styles.categories__content__btn
             }>

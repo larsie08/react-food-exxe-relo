@@ -6,13 +6,13 @@ export const Footer = ({ renderMenu }) => {
   const footerList = (
     <ul className={styles.block_card}>
       <li>
-        <img alt="visa" src="./img/visa-card.png" />
+        <img alt="visa" src="/img/visa-card.png" />
       </li>
       <li>
-        <img alt="mir" src="./img/mir-card.png" />
+        <img alt="mir" src="/img/mir-card.png" />
       </li>
       <li>
-        <img alt="master-card" src="./img/masterCard.png" />
+        <img alt="master-card" src="/img/masterCard.png" />
       </li>
     </ul>
   );
@@ -22,7 +22,7 @@ export const Footer = ({ renderMenu }) => {
       <ul>
         <li>
           <a href="/">
-            <img alt="logo" src="./img/logo.png" />
+            <img alt="logo" src="/img/logo.png" />
           </a>
         </li>
       </ul>

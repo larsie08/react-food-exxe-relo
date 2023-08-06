@@ -1,0 +1,21 @@
+.img_block {
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    img {
+      width: 415px;
+      height: 315px;
+    }
+  }
+
+  &__mini {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 125px;
+      height: 90px;
+    }
+  }
+}

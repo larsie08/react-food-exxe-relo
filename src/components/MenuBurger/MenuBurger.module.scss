@@ -7,6 +7,8 @@
   background-color: #333333;
   transition: 0.3s linear;
 
+  z-index: 3;
+
   &__active {
     width: 100%;
     z-index: 4;
