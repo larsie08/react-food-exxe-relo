@@ -9,7 +9,7 @@ const MenuBlock = () => {
       <div className={styles.menu__header}>
         <h1 className={styles.block__header}>меню</h1>
         <div className={styles.line}>
-          <img alt="underline" src="./img/underline.jpg" />
+          <img alt="underline" src="/img/underline.jpg" />
         </div>
       </div>
       <div className={styles.menu__content}>
@@ -29,24 +29,24 @@ const MenuBlock = () => {
         <div className={styles.menu__block}>
           <div className={styles.block__img}>
             <Link to="menu">
-              <img alt="menu" src="./img/menu_1.png" />
+              <img alt="menu" src="/img/menu_1.png" />
             </Link>
           </div>
           <div className={styles.block__footer}>
             <h1 className={styles.block__header}>Основное меню</h1>
             <div className={styles.line}>
-              <img alt="underline" src="./img/underline.jpg" />
+              <img alt="underline" src="/img/underline.jpg" />
             </div>
           </div>
         </div>
         <div className={styles.menu__block}>
           <div className={styles.block__img}>
-            <img alt="bar_card" src="./img/menu_2.png" />
+            <img alt="bar_card" src="/img/menu_2.png" />
           </div>
           <div className={styles.block__footer}>
             <h1 className={styles.block__header}>Барная карта</h1>
             <div className={styles.line}>
-              <img alt="underline" src="./img/underline.jpg" />
+              <img alt="underline" src="/img/underline.jpg" />
             </div>
           </div>
         </div>

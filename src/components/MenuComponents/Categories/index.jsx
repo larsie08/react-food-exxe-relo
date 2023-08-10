@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { AppContext } from '../../../App';
 
 import styles from './Categories.module.scss';
+import classNames from 'classnames';
 
 const Categories = () => {
   const { categoryId, setCategoryId } = useContext(AppContext);
@@ -30,11 +31,9 @@ const Categories = () => {
           <li
             key={i}
             onClick={() => setCategoryId(i)}
-            className={
-              categoryId === i
-                ? styles.categories__content__btn__active
-                : styles.categories__content__btn
-            }>
+            className={classNames(styles.categories__content__btn, {
+              [styles.categories__content__btn__active]: categoryId === i,
+            })}>
             {categoryName}
           </li>
         ))}

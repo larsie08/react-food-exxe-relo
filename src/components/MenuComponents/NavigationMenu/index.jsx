@@ -6,8 +6,6 @@ import { AppContext } from '../../../App';
 const NavigationMenu = () => {
   const { cartItems } = useContext(AppContext);
 
-  console.log(cartItems)
-
   const totalPrice = cartItems.reduce((sum, obj) => obj.price + sum, 0);
 
   return (

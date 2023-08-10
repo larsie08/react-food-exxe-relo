@@ -13,21 +13,18 @@
       font-size: 16px;
       line-height: 140%;
       padding-bottom: 5px;
-      border-bottom: 3px;
+      border-bottom: 3px solid transparent;
       cursor: pointer;
 
       &__active {
-        border-bottom: 3px solid;
-        padding-bottom: 5px;
         border-color: rgb(181, 149, 113);
-        transition: border-color ease 0.4s;
+        transition: border-color ease 0.2s;
       }
     }
 
     &__btn:hover {
-      border-bottom: 3px solid;
       border-color: rgba(181, 149, 113, 0.4);
-      transition: border-color ease 0.4s;
+      transition: border-color ease 0.2s;
     }
   }
 }

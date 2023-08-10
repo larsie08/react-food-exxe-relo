@@ -8,11 +8,20 @@
     .content {
       display: flex;
       justify-content: space-evenly;
-      margin-top: 50px;
+      margin-top: 80px;
 
       &__dish_info {
         display: flex;
         flex-direction: column;
+
+        &__title {
+          text-align: center;
+          margin-bottom: 35px;
+
+          h1 {
+            margin: 0;
+          }
+        }
 
         &__price_block {
           display: flex;
@@ -21,6 +30,7 @@
           .price_block {
             display: flex;
             align-items: center;
+            margin-top: 15px;
 
             &__gram {
               display: flex;
@@ -73,11 +83,16 @@
               gap: 15px;
               margin-right: 20px;
 
+              p {
+                margin: 0;
+              }
+
               border: 1px solid rgba(51, 51, 51, 0.2);
 
               .svg_counter {
                 display: flex;
                 flex-direction: column;
+                user-select: none;
               }
             }
 

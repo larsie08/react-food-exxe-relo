@@ -8,7 +8,7 @@ const DeliveryBlock = () => {
       <div className={styles.delivery__header}>
         <h1 className={styles.block__header}>доставка</h1>
         <div className={styles.line}>
-          <img alt='underline' src="./img/underline.jpg" />
+          <img alt='underline' src="/img/underline.jpg" />
         </div>
       </div>
       <div className={styles.delivery__content}>

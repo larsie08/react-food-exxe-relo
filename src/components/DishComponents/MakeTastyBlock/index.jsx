@@ -2,39 +2,34 @@ import React from 'react';
 
 import styles from './MakeTastyBlock.module.scss';
 
-const MakeTastyBlock = () => {
+const MakeTastyBlock = ({onClick, isClicked}) => {
+  const ingredients = [
+    { title: 'Тигровые креветки 60 г', price: 450 },
+    { title: 'Томаты / паприка', price: 80 },
+    { title: 'Бекон', price: 120 },
+    { title: 'Сыр чеддер 30 г', price: 80 },
+  ];
+
+  const onClicked = (item, id) => {
+    const obj = {id, price: item.price}; 
+    onClick(obj);
+  }
+
   return (
     <div className={styles.content}>
       <h1>Сделать еще вкуснее</h1>
       <div className={styles.content__ingredients_block}>
-        <div className={styles.ingredient_block}>
-          <div className={styles.ingredient_block__content}>
-            <h2>Тигровые креветки 60 г</h2>
-            <p>450 ₽</p>
+        {ingredients.map((item, id) => (
+          <div key={id} className={styles.ingredient_block}>
+            <div className={styles.ingredient_block__content}>
+              <h2>{item.title}</h2>
+              <p>{item.price} ₽</p>
+            </div>
+            <div onClick={() => onClicked(item, id)} className={styles.ingredient_block__btn}>
+              {isClicked(id) ? <img src="/img/mark.png" alt="mark" /> : null}
+            </div>
           </div>
-          <div className={styles.ingredient_block__btn}></div>
-        </div>
-        <div className={styles.ingredient_block}>
-          <div className={styles.ingredient_block__content}>
-            <h2>Томаты / паприка</h2>
-            <p>80 ₽</p>
-          </div>
-          <div className={styles.ingredient_block__btn}></div>
-        </div>
-        <div className={styles.ingredient_block}>
-          <div className={styles.ingredient_block__content}>
-            <h2>Бекон</h2>
-            <p>120 ₽</p>
-          </div>
-          <div className={styles.ingredient_block__btn}></div>
-        </div>
-        <div className={styles.ingredient_block}>
-          <div className={styles.ingredient_block__content}>
-            <h2>Сыр чеддер 30 г</h2>
-            <p>80 ₽</p>
-          </div>
-          <div className={styles.ingredient_block__btn}></div>
-        </div>
+        ))}
       </div>
     </div>
   );

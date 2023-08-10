@@ -16,10 +16,10 @@ const Reserve = () => {
           [styles.reserve__content__active]: isOpenModal,
         })}>
         <div onClick={() => setIsOpenModal(false)} className={styles.reserve__content__close}>
-          <img alt="close" src="./img/close.png" />
+          <img alt="close" src="/img/close.png" />
         </div>
         <div onClick={() => setIsOpenModal(false)} className={styles.reserve__content__logo}>
-          <img alt="logo" src="./img/logo.png" />
+          <img alt="logo" src="/img/logo.png" />
         </div>
         <div className={styles.reserve__content__title}>
           <h4>Забронировать столик</h4>

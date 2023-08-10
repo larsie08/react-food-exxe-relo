@@ -1,5 +1,4 @@
 import React, { createContext, useContext } from 'react';
-import axios from 'axios';
 
 import NavigationMenu from '../../components/MenuComponents/NavigationMenu';
 import Categories from '../../components/MenuComponents/Categories';
@@ -13,7 +12,7 @@ import styles from './Menu.module.scss';
 export const MenuContext = createContext();
 
 const Menu = () => {
-  const { cartItems, setCartItems, items, onAddToCart } = useContext(AppContext);
+  const { cartItems, items, onAddToCart } = useContext(AppContext);
 
   return (
     <MenuContext.Provider value={{ cartItems }}>

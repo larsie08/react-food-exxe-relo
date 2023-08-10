@@ -8,6 +8,7 @@ import Menu from './pages/Menu';
 import Reserve from './components/Reserve';
 import MenuBurger from './components/MenuBurger';
 import Dish from './pages/Dish';
+import EmptyPage from './pages/EmptyPage';
 
 export const AppContext = React.createContext();
 
@@ -28,7 +29,7 @@ function App() {
         setCartItems(cartResponse.data);
       } catch (error) {
         alert('Ошибка при запросе данных ;(');
-        console.error();
+        console.error(error);
       }
     }
 
@@ -43,11 +44,22 @@ function App() {
         await axios.delete(`https://64c180cafa35860baea09f01.mockapi.io/cartItems/${findItem.id}`);
       } else {
         setCartItems((prev) => [...prev, obj]);
-        await axios.post('https://64c180cafa35860baea09f01.mockapi.io/cartItems', obj);
+        const {data} = await axios.post('https://64c180cafa35860baea09f01.mockapi.io/cartItems', obj);
+        setCartItems((prev) =>
+          prev.map((item) => {
+            if (item.parentId === data.parentId) {
+              return {
+                ...item,
+                id: data.id,
+              };
+            }
+            return item;
+          }),
+        );
       }
     } catch (error) {
       alert('Не удалось добавить в корзину');
-      console.error();
+      console.error(error);
     }
   };
 
@@ -80,6 +92,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu/dish/:id" element={<Dish />} />
+        <Route path="*" element={<EmptyPage />} />
       </Routes>
 
       <Reserve />
