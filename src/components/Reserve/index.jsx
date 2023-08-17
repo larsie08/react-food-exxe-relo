@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 import { AppContext } from '../../App';
@@ -9,6 +9,22 @@ import classNames from 'classnames';
 const Reserve = () => {
   const { isOpenModal, setIsOpenModal } = React.useContext(AppContext);
 
+  useEffect(() => {
+    function handlekeydownEvent(event) {
+      const { keyCode } = event;
+      if (keyCode === 27) {
+        if (isOpenModal) {
+          setIsOpenModal(false);
+        }
+      }
+    }
+
+    document.addEventListener('keyup', handlekeydownEvent);
+    return () => {
+      document.removeEventListener('keyup', handlekeydownEvent);
+    };
+  });
+
   return ReactDOM.createPortal(
     <div className={classNames(styles.reserve, { [styles.reserve__active]: isOpenModal })}>
       <div
@@ -16,10 +32,10 @@ const Reserve = () => {
           [styles.reserve__content__active]: isOpenModal,
         })}>
         <div onClick={() => setIsOpenModal(false)} className={styles.reserve__content__close}>
-          <img alt="close" src="/img/close.png" />
+          <img alt="close" src="./img/close.png" />
         </div>
         <div onClick={() => setIsOpenModal(false)} className={styles.reserve__content__logo}>
-          <img alt="logo" src="/img/logo.png" />
+          <img alt="logo" src="./img/logo.png" />
         </div>
         <div className={styles.reserve__content__title}>
           <h4>Забронировать столик</h4>

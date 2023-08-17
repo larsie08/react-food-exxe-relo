@@ -6,11 +6,12 @@
 
   img {
     width: 100%;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.3);;
   }
 
   &__title {
     text-align: center;
-    margin: 50px 0;
+    margin: 35px 0;
 
     font-weight: 700;
     font-size: 20px;

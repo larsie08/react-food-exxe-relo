@@ -12,7 +12,7 @@ const ContactsBlock = () => {
       <div className={styles.contacts__header}>
         <h1 className={styles.block__header}>контакты</h1>
         <div className={styles.line}>
-          <img alt="underline" src="/img/underline.jpg" />
+          <img alt="underline" src="./img/underline.jpg" />
         </div>
       </div>
 
@@ -71,11 +71,11 @@ const ContactsBlock = () => {
         <div className={styles.information}>
           <div className={styles.information__block}>
             <div className={styles.information__block__adress}>
-              <img alt="vector" src="/img/Vector.png" />
+              <img alt="vector" src="./img/Vector.png" />
               <p>Санкт-Петербург, Северная дорога, 11 </p>
             </div>
             <div className={styles.information__block__number}>
-              <img alt="phone" src="/img/phone.png" />
+              <img alt="phone" src="./img/phone.png" />
               <p>+7 (921) 777-77-77</p>
             </div>
             <div className={styles.information__block__middle}>
@@ -103,7 +103,7 @@ const ContactsBlock = () => {
             </div>
           </div>
           <div className={styles.background}>
-            <img src="/img/map.jpg" alt="map" />
+            <img src="./img/map.jpg" alt="map" />
           </div>
         </div>
       </div>

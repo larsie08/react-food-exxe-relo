@@ -2,14 +2,16 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import { AppContext } from '../../../App';
+import { MenuContext } from '../../../pages/Menu';
 
 import styles from './FoodCard.module.scss';
 
-const FoodCard = ({ id, price, title, imageUrl, onAddToCart }) => {
+const FoodCard = ({ id, price, title, imageUrl, }) => {
   const {itemIsAdded} = useContext(AppContext);
+  const {onAddToCart} = useContext(MenuContext)
 
   const onPlus = () => {
-    const obj = { id, parentId: id ,imageUrl, title, price };
+    const obj = { id, parentId: id ,imageUrl, title, price, volume: 1 };
     onAddToCart(obj);
   }
 

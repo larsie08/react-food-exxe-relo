@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+
 import axios from 'axios';
 
 import Home from './pages/Home';
-import Sidebar from './components/Sidebar';
 import Menu from './pages/Menu';
-import Reserve from './components/Reserve';
-import MenuBurger from './components/MenuBurger';
 import Dish from './pages/Dish';
 import EmptyPage from './pages/EmptyPage';
+
+import Sidebar from './components/Sidebar';
+import Reserve from './components/Reserve';
+import MenuBurger from './components/MenuBurger';
 
 export const AppContext = React.createContext();
 
@@ -23,7 +25,9 @@ function App() {
     async function fetchData() {
       try {
         const itemsResponse = await axios.get('https://64c180cafa35860baea09f01.mockapi.io/items');
-        const cartResponse = await axios.get('https://64c180cafa35860baea09f01.mockapi.io/cartItems');
+        const cartResponse = await axios.get(
+          'https://64c180cafa35860baea09f01.mockapi.io/cartItems',
+        );
 
         setItems(itemsResponse.data);
         setCartItems(cartResponse.data);
@@ -38,16 +42,19 @@ function App() {
 
   const onAddToCart = async (obj) => {
     try {
-      const findItem = cartItems.find((item) => Number(item.parentId) === Number(obj.id));
+      const findItem = cartItems.find((item) => Number(item.parentId) === Number(obj.parentId));
       if (findItem) {
-        setCartItems((prev) => prev.filter((item) => Number(item.parentId) !== Number(obj.id)));
+        setCartItems((prev) => prev.filter((item) => Number(item.parentId) !== Number(obj.parentId)));
         await axios.delete(`https://64c180cafa35860baea09f01.mockapi.io/cartItems/${findItem.id}`);
       } else {
         setCartItems((prev) => [...prev, obj]);
-        const {data} = await axios.post('https://64c180cafa35860baea09f01.mockapi.io/cartItems', obj);
+        const { data } = await axios.post(
+          'https://64c180cafa35860baea09f01.mockapi.io/cartItems',
+          obj,
+        );
         setCartItems((prev) =>
           prev.map((item) => {
-            if (item.parentId === data.parentId) {
+            if (Number(item.parentId) === Number(data.parentId)) {
               return {
                 ...item,
                 id: data.id,
@@ -88,6 +95,7 @@ function App() {
         onAddToCart,
       }}>
       <Sidebar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />

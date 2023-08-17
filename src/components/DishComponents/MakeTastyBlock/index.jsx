@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { DishContext } from '../../../pages/Dish';
 
 import styles from './MakeTastyBlock.module.scss';
 
-const MakeTastyBlock = ({onClick, isClicked}) => {
+const MakeTastyBlock = () => {
+  const { isClicked, onClick } = useContext(DishContext);
+
   const ingredients = [
     { title: 'Тигровые креветки 60 г', price: 450 },
     { title: 'Томаты / паприка', price: 80 },
@@ -11,9 +15,9 @@ const MakeTastyBlock = ({onClick, isClicked}) => {
   ];
 
   const onClicked = (item, id) => {
-    const obj = {id, price: item.price}; 
+    const obj = { id, price: item.price };
     onClick(obj);
-  }
+  };
 
   return (
     <div className={styles.content}>
@@ -26,7 +30,7 @@ const MakeTastyBlock = ({onClick, isClicked}) => {
               <p>{item.price} ₽</p>
             </div>
             <div onClick={() => onClicked(item, id)} className={styles.ingredient_block__btn}>
-              {isClicked(id) ? <img src="/img/mark.png" alt="mark" /> : null}
+              {isClicked(id) ? <img src="./img/mark.png" alt="mark" /> : null}
             </div>
           </div>
         ))}
