@@ -11,7 +11,7 @@ const FoodCard = ({ id, price, title, imageUrl, }) => {
   const {onAddToCart} = useContext(MenuContext)
 
   const onPlus = () => {
-    const obj = { id, parentId: id ,imageUrl, title, price, volume: 1 };
+    const obj = { id, parentId: id ,imageUrl, title, price, volume: 1, makeTastyId: [] };
     onAddToCart(obj);
   }
 

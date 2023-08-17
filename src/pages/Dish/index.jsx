@@ -36,6 +36,8 @@ const Dish = () => {
     }
   }, [cartItems, dish, isLoaded, items, param.id]);
 
+  console.log(makeTasty)
+
   if (!dish) return null;
 
   const onPlus = (obj) => {
