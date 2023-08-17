@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-food-exxe-relo/static/css/main.b334d3e9.css",
-    "main.js": "/react-food-exxe-relo/static/js/main.adfffc76.js",
-    "index.html": "/react-food-exxe-relo/index.html",
-    "main.b334d3e9.css.map": "/react-food-exxe-relo/static/css/main.b334d3e9.css.map",
-    "main.adfffc76.js.map": "/react-food-exxe-relo/static/js/main.adfffc76.js.map"
+    "main.css": "/larsie08.github.io/react-food-exxe-relo/static/css/main.b334d3e9.css",
+    "main.js": "/larsie08.github.io/react-food-exxe-relo/static/js/main.ff8ec528.js",
+    "index.html": "/larsie08.github.io/react-food-exxe-relo/index.html",
+    "main.b334d3e9.css.map": "/larsie08.github.io/react-food-exxe-relo/static/css/main.b334d3e9.css.map",
+    "main.ff8ec528.js.map": "/larsie08.github.io/react-food-exxe-relo/static/js/main.ff8ec528.js.map"
   },
   "entrypoints": [
     "static/css/main.b334d3e9.css",
-    "static/js/main.adfffc76.js"
+    "static/js/main.ff8ec528.js"
   ]
 }
