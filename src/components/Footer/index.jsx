@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 import styles from './Footer.module.scss';
 
-export const Footer = ({ renderMenu }) => {
+const Footer = ({ renderMenu }) => {
   const footerList = (
     <ul className={styles.block_card}>
       <li>
@@ -33,3 +33,5 @@ export const Footer = ({ renderMenu }) => {
     </footer>
   );
 };
+
+export default Footer;

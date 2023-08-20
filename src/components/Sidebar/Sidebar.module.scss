@@ -14,8 +14,8 @@
     align-items: center;
 
     li {
-        cursor: pointer;
-        margin: 9px 0;
+      cursor: pointer;
+      margin: 9px 0;
     }
   }
 
@@ -29,4 +29,18 @@
 .icons {
   display: flex;
   margin: 9px 0;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 80px;
+
+    &__logo {
+      display: flex;
+
+      img {
+        width: 70px;
+      }
+    }
+  }
 }

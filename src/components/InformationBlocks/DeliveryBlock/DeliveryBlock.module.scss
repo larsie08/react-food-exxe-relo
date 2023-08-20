@@ -40,7 +40,6 @@
 
     &__btn {
       display: flex;
-      margin-right: 135px;
 
       li {
         margin-right: 30px;
@@ -81,6 +80,14 @@
   .delivery__content {
     h1 {
       margin: 0 100px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .delivery__content {
+    h1 {
+      margin: 0 60px;
     }
   }
 }

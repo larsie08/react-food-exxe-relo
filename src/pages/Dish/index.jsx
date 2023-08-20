@@ -1,17 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-import { AppContext } from '../../App';
+import { AppContext } from "../../App";
 
-import NavigationMenu from '../../components/MenuComponents/NavigationMenu';
-import { Footer } from '../../components/Footer';
-import Categories from '../../components/MenuComponents/Categories';
-import ImgBlock from '../../components/DishComponents/ImgBlock';
-import MakeTastyBlock from '../../components/DishComponents/MakeTastyBlock';
-import ContactsBlock from '../../components/InformationBlocks/ContactsBlock';
-import DishPrice from '../../components/DishComponents/DishPrice';
+import NavigationMenu from "../../components/MenuComponents/NavigationMenu";
+import Footer from "../../components/Footer";
+import Categories from "../../components/MenuComponents/Categories";
+import ImgBlock from "../../components/DishComponents/ImgBlock";
+import MakeTastyBlock from "../../components/DishComponents/MakeTastyBlock";
+import ContactsBlock from "../../components/InformationBlocks/ContactsBlock";
+import DishPrice from "../../components/DishComponents/DishPrice";
 
-import styles from './Dish.module.scss';
+import styles from "./Dish.module.scss";
 
 export const DishContext = React.createContext();
 
@@ -25,7 +25,9 @@ const Dish = () => {
   const param = useParams();
 
   useEffect(() => {
-    const findItem = cartItems.find((item) => Number(item.parentId) === Number(param.id));
+    const findItem = cartItems.find(
+      (item) => Number(item.parentId) === Number(param.id)
+    );
     if (findItem) {
       setDish(findItem);
       setIsLoaded(true);
@@ -36,8 +38,6 @@ const Dish = () => {
     }
   }, [cartItems, dish, isLoaded, items, param.id]);
 
-  console.log(makeTasty)
-
   if (!dish) return null;
 
   const onPlus = (obj) => {
@@ -45,7 +45,9 @@ const Dish = () => {
   };
 
   const onClick = (obj) => {
-    const findItem = makeTasty.some((item) => Number(item.id) === Number(obj.id));
+    const findItem = makeTasty.some(
+      (item) => Number(item.id) === Number(obj.id)
+    );
     if (findItem) {
       setMakeTasty(makeTasty.filter((item) => item.id !== obj.id));
     } else {
@@ -58,7 +60,9 @@ const Dish = () => {
   };
 
   return (
-    <DishContext.Provider value={{ param, dish, makeTasty, isLoaded, isClicked, onPlus, onClick }}>
+    <DishContext.Provider
+      value={{ param, dish, makeTasty, isLoaded, isClicked, onPlus, onClick }}
+    >
       <div className={styles.wrapper}>
         <NavigationMenu />
         <div className={styles.container}>

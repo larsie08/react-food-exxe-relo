@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import NavigationMenu from '../../components/MenuComponents/NavigationMenu';
-import { Footer } from '../../components/Footer';
+import NavigationMenu from "../../components/MenuComponents/NavigationMenu";
+import Footer from "../../components/Footer";
 
-import styles from './EmptyPage.module.scss';
-import ContactsBlock from '../../components/InformationBlocks/ContactsBlock';
+import styles from "./EmptyPage.module.scss";
+import ContactsBlock from "../../components/InformationBlocks/ContactsBlock";
 
 const EmptyPage = () => {
   return (

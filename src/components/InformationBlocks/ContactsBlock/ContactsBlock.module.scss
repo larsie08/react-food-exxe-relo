@@ -292,3 +292,13 @@
     width: 450px !important;
   }
 }
+
+@media (max-width: 800px) {
+  .background {
+    display: none !important;
+  }
+
+  .information__block {
+    display: none !important;
+  }
+}

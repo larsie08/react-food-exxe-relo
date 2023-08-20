@@ -19,3 +19,18 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .img_block__main {
+    img {
+      width: 300px;
+      height: 250px;
+    }
+  }
+  .img_block__mini {
+    img {
+      
+    }
+  }
+
+}
