@@ -40,9 +40,11 @@
 
     &__btn {
       display: flex;
+      gap: 30px;
 
       li {
-        margin-right: 30px;
+        display: flex;
+        align-items: center;
         font-weight: 700;
         font-size: 20px;
         line-height: 140%;
@@ -88,6 +90,47 @@
   .delivery__content {
     h1 {
       margin: 0 60px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .delivery__content {
+    flex-direction: column;
+
+    h1 {
+      font-size: 56px;
+      margin: 0 0 50px 0;
+    }
+  }
+
+  .content {
+    p {
+      gap: 100px;
+    }
+  }
+
+  .delivery__footer__btn {
+    li {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .delivery__footer__btn {
+    li {
+      font-size: 14px;
+    }
+
+    .btn__left {
+      text-align: center;
+      padding: 15px 25px;
+    }
+
+    .btn__right {
+      text-align: center;
+      padding: 15px 25px;
     }
   }
 }

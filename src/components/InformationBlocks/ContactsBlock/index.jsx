@@ -102,9 +102,9 @@ const ContactsBlock = () => {
               </ul>
             </div>
           </div>
-          <div className={styles.background}>
+          {/* <div className={styles.background}>
             <img src="./img/map.jpg" alt="map" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

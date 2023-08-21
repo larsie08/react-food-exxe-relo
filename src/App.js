@@ -20,11 +20,14 @@ function App() {
   const [categoryId, setCategoryId] = useState(0);
   const [items, setItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const itemsResponse = await axios.get('https://64c180cafa35860baea09f01.mockapi.io/items');
+        const itemsResponse = await axios.get(
+          `https://64c180cafa35860baea09f01.mockapi.io/items?page=${currentPage}&limit=4`,
+        );
         const cartResponse = await axios.get(
           'https://64c180cafa35860baea09f01.mockapi.io/cartItems',
         );
@@ -38,13 +41,15 @@ function App() {
     }
 
     fetchData();
-  }, []);
+  }, [currentPage]);
 
   const onAddToCart = async (obj) => {
     try {
       const findItem = cartItems.find((item) => Number(item.parentId) === Number(obj.parentId));
       if (findItem) {
-        setCartItems((prev) => prev.filter((item) => Number(item.parentId) !== Number(obj.parentId)));
+        setCartItems((prev) =>
+          prev.filter((item) => Number(item.parentId) !== Number(obj.parentId)),
+        );
         await axios.delete(`https://64c180cafa35860baea09f01.mockapi.io/cartItems/${findItem.id}`);
       } else {
         setCartItems((prev) => [...prev, obj]);
@@ -93,6 +98,7 @@ function App() {
         setCategoryId,
         itemIsAdded,
         onAddToCart,
+        setCurrentPage,
       }}>
       <Sidebar />
 

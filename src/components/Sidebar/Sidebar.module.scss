@@ -44,3 +44,20 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .sidebar {
+    width: 60px;
+
+    &__logo {
+      img {
+        width: 55px;
+      }
+    }
+    .sidebar_content__footer {
+      img {
+        width: 35px;
+      }
+    }
+  }
+}

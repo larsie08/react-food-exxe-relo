@@ -43,3 +43,42 @@
     margin-left: 120px;
   }
 }
+
+@media (max-width: 650px) {
+  .intro {
+    height: 800px;
+  }
+
+  .main {
+    height: 800px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin-left: 60px;
+  }
+
+  .main {
+    height: 600px !important;
+
+    &__title {
+      text-align: center;
+      font-size: 36px !important;
+    }
+  }
+
+  .intro {
+    height: 600px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: 100vw;
+  }
+
+  .main__title {
+    font-size: 30px !important;
+  }
+}

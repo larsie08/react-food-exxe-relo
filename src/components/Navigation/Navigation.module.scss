@@ -23,7 +23,8 @@ ol {
     margin-right: 25px;
   }
 
-  a, button {
+  a,
+  button {
     font-weight: 400;
     font-size: 16px;
     text-decoration: none;
@@ -47,5 +48,46 @@ ol {
 @media (max-width: 1000px) {
   .nav__list {
     margin: 5px 30px 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    &__list {
+      margin: 5px 0;
+    }
+    a,
+    button {
+      font-size: 14px;
+    }
+
+    .active {
+      padding: 15px 25px;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .nav {
+    &__list {
+      margin: 5px 0;
+    }
+    &__link {
+      margin-right: 15px;
+    }
+    a,
+    button {
+      font-size: 14px;
+    }
+
+    .active {
+      padding: 15px 15px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .nav {
+    display: none;
   }
 }

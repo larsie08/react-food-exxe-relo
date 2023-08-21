@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import styles from './Footer.module.scss';
 
@@ -26,10 +26,14 @@ const Footer = ({ renderMenu }) => {
             <img alt="logo" src="./img/logo.png" />
           </Link>
         </li>
+        <li>
+          <h4>Политика конфиденциальности</h4>
+        </li>
+        <li>{renderMenu && footerList}</li>
+        <li>
+          <h5>Дизайн d-e-n.ru</h5>
+        </li>
       </ul>
-      <h4>Политика конфиденциальности</h4>
-      {renderMenu && footerList}
-      <h5>Дизайн d-e-n.ru</h5>
     </footer>
   );
 };
