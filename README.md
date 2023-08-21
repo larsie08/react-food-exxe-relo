@@ -20,7 +20,7 @@
 ## Installation
 
 ```
-git clone https://github.com/Reyrin/pizza.git
+git clone https://github.com/larsie08/react-food-exxe-relo.git
 ```
 
 ## Installing dependencies
