@@ -34,3 +34,12 @@
     }
   }
 }
+
+@media (max-width: 350px) {
+  .root {
+    a {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
+}

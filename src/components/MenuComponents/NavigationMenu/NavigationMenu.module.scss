@@ -5,17 +5,16 @@
 
   &__content {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
     max-width: 280px;
-    gap: 10px;
+    gap: 15px;
 
     &__account {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 15px;
 
       a {
+        display: flex;
         font-size: 16px;
         line-height: 140%;
         font-weight: 400;
@@ -28,6 +27,10 @@
       display: flex;
       align-items: center;
       gap: 15px;
+      
+      a {
+        display: flex;
+      }
     }
   }
 }
@@ -35,5 +38,11 @@
 @media (max-width: 1000px) {
   .header {
     padding: 20px 35px 0 0;
+  }
+}
+
+@media (max-width: 370px) {
+  .header {
+    padding: 20px 0;
   }
 }
