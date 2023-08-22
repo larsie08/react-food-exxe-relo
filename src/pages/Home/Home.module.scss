@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 .wrapper {
   height: 100%;
 }
@@ -74,10 +70,6 @@
 }
 
 @media (max-width: 380px) {
-  .container {
-    width: 100vw;
-  }
-
   .main__title {
     font-size: 30px !important;
   }
