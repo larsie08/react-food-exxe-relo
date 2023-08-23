@@ -7,13 +7,13 @@ const Footer = ({ renderMenu }) => {
   const footerList = (
     <ul className={styles.block_card}>
       <li>
-        <img alt="visa" src="./img/visa-card.png" />
+        <img alt="visa" src="./img/visa-card.webp" />
       </li>
       <li>
-        <img alt="mir" src="./img/mir-card.png" />
+        <img alt="mir" src="./img/mir-card.webp" />
       </li>
       <li>
-        <img alt="master-card" src="./img/masterCard.png" />
+        <img alt="master-card" src="./img/masterCard.webp" />
       </li>
     </ul>
   );
@@ -23,7 +23,7 @@ const Footer = ({ renderMenu }) => {
       <ul>
         <li>
           <Link href="/">
-            <img alt="logo" src="./img/logo.png" />
+            <img alt="logo" src="./img/logo.webp" />
           </Link>
         </li>
         <li>

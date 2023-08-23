@@ -13,7 +13,7 @@ const Sidebar = () => {
       <ul className={styles.sidebar_content__header}>
         <li className={styles.sidebar__logo}>
           <Link to="/">
-            <img alt="icons" src="./img/logo.png" />
+            <img alt="icons" src="./img/logo.webp" />
           </Link>
         </li>
         <li onClick={() => setIsOpenBurger(true)} className={styles.sidebar__menu}>
@@ -24,17 +24,17 @@ const Sidebar = () => {
       <ul className={styles.sidebar_content__footer}>
         <li>
           <Link to="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" className={styles.icons}>
-            <img alt="icons" src="./img/yt-icons.png" />
+            <img alt="icons" src="./img/yt-icons.webp" />
           </Link>
         </li>
         <li>
           <Link to="https://vk.com" target="_blank" className={styles.icons}>
-            <img alt="icons" src="./img/vk-icons.png" />
+            <img alt="icons" src="./img/vk-icons.webp" />
           </Link>
         </li>
         <li>
           <Link to="https://telegram.org" target="_blank" className={styles.icons}>
-            <img alt="icons" src="./img/tg-icons.png" />
+            <img alt="icons" src="./img/tg-icons.webp" />
           </Link>
         </li>
       </ul>

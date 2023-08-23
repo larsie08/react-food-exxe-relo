@@ -34,11 +34,11 @@ const MenuBurger = () => {
           [styles.menu_burger__content__active]: isOpenBurger,
         })}>
         <ul onClick={() => setIsOpenBurger(false)} className={styles.menu_burger__content__header}>
-          <li className={styles.logo}>
-            <img alt="logo" src="./img/logo.png" />
-          </li>
+          <Link to="/" className={styles.logo}>
+            <img alt="logo" src="./img/logo.webp" />
+          </Link>
           <li>
-            <img alt="close" src="./img/mini-close.png" />
+            <img alt="close" src="./img/mini-close.webp" />
           </li>
         </ul>
 
@@ -65,17 +65,17 @@ const MenuBurger = () => {
           <ul>
             <li>
               <Link to="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-                <img alt="yt-icon" src="./img/yt-icons.png" />
+                <img alt="yt-icon" src="./img/yt-icons.webp" />
               </Link>
             </li>
             <li>
               <Link to="https://vk.com" target="_blank">
-                <img alt="vk-icon" src="./img/vk-icons.png" />
+                <img alt="vk-icon" src="./img/vk-icons.webp" />
               </Link>
             </li>
             <li>
               <Link to="https://telegram.org" target="_blank">
-                <img alt="tg-icon" src="./img/tg-icons.png" />
+                <img alt="tg-icon" src="./img/tg-icons.webp" />
               </Link>
             </li>
           </ul>

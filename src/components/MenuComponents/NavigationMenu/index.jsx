@@ -14,12 +14,12 @@ const NavigationMenu = () => {
         <li className={styles.header__content__account}>
           <a href="/">Личный кабинет</a>
           <a href="/">
-            <img alt="account" src="./img/account.png" />
+            <img alt="account" src="./img/account.webp" />
           </a>
         </li>
         <li className={styles.header__content__cart}>
           <a href="/">
-            <img alt="cart" src="./img/shopping-basket.png" />
+            <img alt="cart" src="./img/shopping-basket.webp" />
           </a>
           <span>{totalPrice} ₽</span>
         </li>

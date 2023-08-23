@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className={styles.wrapper}>
       <Navigation />
-      <img className={styles.intro} src="./img/intro.png" alt="Фон" />
+      <img className={styles.intro} src="./img/intro.webp" alt="Фон" />
       <div className={styles.container}>
         <div className={styles.main}>
           <h1 className={styles.main__title}>
