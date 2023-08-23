@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-food-exxe-relo/static/css/main.021c5fb9.css",
-    "main.js": "/react-food-exxe-relo/static/js/main.89eb5817.js",
-    "static/media/map.jpg": "/react-food-exxe-relo/static/media/map.30414e90e80511cf7268.jpg",
+    "main.css": "/react-food-exxe-relo/static/css/main.814078f2.css",
+    "main.js": "/react-food-exxe-relo/static/js/main.ebebd0ee.js",
+    "static/media/map.webp": "/react-food-exxe-relo/static/media/map.252a7daf03298a7b967b.webp",
     "index.html": "/react-food-exxe-relo/index.html",
-    "main.021c5fb9.css.map": "/react-food-exxe-relo/static/css/main.021c5fb9.css.map",
-    "main.89eb5817.js.map": "/react-food-exxe-relo/static/js/main.89eb5817.js.map"
+    "main.814078f2.css.map": "/react-food-exxe-relo/static/css/main.814078f2.css.map",
+    "main.ebebd0ee.js.map": "/react-food-exxe-relo/static/js/main.ebebd0ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.021c5fb9.css",
-    "static/js/main.89eb5817.js"
+    "static/css/main.814078f2.css",
+    "static/js/main.ebebd0ee.js"
   ]
 }
