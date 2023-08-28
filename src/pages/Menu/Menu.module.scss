@@ -10,24 +10,24 @@
     padding-top: 60px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(4, 310px);
+    grid-template-columns: repeat(4, 290px);
     gap: 24px;
   }
+}
 
-  @media (max-width: 1300px) {
-    .food_card__wrapper {
-      grid-template-columns: repeat(3, 310px);
-    }
+@media (max-width: 1450px) {
+  .food_card__wrapper {
+    grid-template-columns: repeat(3, 290px) !important;
+  }
+}
+
+@media (max-width: 1150px) {
+  .food_card__wrapper {
+    grid-template-columns: repeat(2, 290px) !important;
   }
 
-  @media (max-width: 1150px) {
-    .food_card__wrapper {
-      grid-template-columns: repeat(2, 310px);
-    }
-
-    .container {
-      margin-left: 120px;
-    }
+  .container {
+    margin-left: 100px;
   }
 }
 

@@ -103,3 +103,9 @@
     }
   }
 }
+
+@media (max-width: 320px) {
+  .block_card {
+    display: none !important;
+  }
+}

@@ -99,13 +99,11 @@ const DishPrice = () => {
               </svg>
             </div>
           </div>
-          <div className={styles.number_servings__btn}>
-            <button
-              onClick={isClicked}
-              className={itemIsAdded(dish.parentId) ? styles.active_btn : ''}>
-              {itemIsAdded(dish.parentId) ? 'В корзине' : 'В корзину'}
-            </button>
-          </div>
+          <button
+            onClick={isClicked}
+            className={itemIsAdded(dish.parentId) ? styles.active_btn : ''}>
+            {itemIsAdded(dish.parentId) ? 'В корзине' : 'В корзину'}
+          </button>
         </div>
       </div>
     </>

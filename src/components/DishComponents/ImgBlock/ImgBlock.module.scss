@@ -29,8 +29,28 @@
   }
   .img_block__mini {
     img {
-      
+      display: none;
     }
   }
+}
 
+@media (max-width: 820px) {
+  .img_block {
+    align-items: center;
+    margin: 50px 0 30px 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .img_block {
+    img {
+      height: 200px;
+      width: 250px;
+    }
+  }
 }

@@ -21,6 +21,9 @@
 
           h1 {
             margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 120%;
           }
         }
 
@@ -34,5 +37,36 @@
 
   .line {
     border: 1px solid rgba(128, 128, 128, 0.4);
+    width: 100%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .container {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin-left: 80px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin-left: 60px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .content__dish_info__title {
+    h1 {
+      font-size: 26px !important;
+    }
+  }
+
+  .content__dish_info {
+    max-width: 260px !important;
   }
 }

@@ -1,17 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useContext, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
-import { AppContext } from "../../App";
+import { AppContext } from '../../App';
 
-import NavigationMenu from "../../components/MenuComponents/NavigationMenu";
-import Footer from "../../components/Footer";
-import Categories from "../../components/MenuComponents/Categories";
-import ImgBlock from "../../components/DishComponents/ImgBlock";
-import MakeTastyBlock from "../../components/DishComponents/MakeTastyBlock";
-import ContactsBlock from "../../components/InformationBlocks/ContactsBlock";
-import DishPrice from "../../components/DishComponents/DishPrice";
+import NavigationMenu from '../../components/MenuComponents/NavigationMenu';
+import Footer from '../../components/Footer';
+import Categories from '../../components/MenuComponents/Categories';
+import ImgBlock from '../../components/DishComponents/ImgBlock';
+import MakeTastyBlock from '../../components/DishComponents/MakeTastyBlock';
+import ContactsBlock from '../../components/InformationBlocks/ContactsBlock';
+import DishPrice from '../../components/DishComponents/DishPrice';
 
-import styles from "./Dish.module.scss";
+import styles from './Dish.module.scss';
 
 export const DishContext = React.createContext();
 
@@ -21,13 +21,14 @@ const Dish = () => {
   const [makeTasty, setMakeTasty] = useState([]);
   const [dish, setDish] = useState();
   const [isLoaded, setIsLoaded] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const breakpoint = 820;
 
   const param = useParams();
 
   useEffect(() => {
-    const findItem = cartItems.find(
-      (item) => Number(item.parentId) === Number(param.id)
-    );
+    const findItem = cartItems.find((item) => Number(item.parentId) === Number(param.id));
     if (findItem) {
       setDish(findItem);
       setIsLoaded(true);
@@ -36,6 +37,13 @@ const Dish = () => {
       setDish(items.find((item) => Number(item.id) === Number(param.id)));
       setIsLoaded(true);
     }
+
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+
+    window.addEventListener('resize', handleResizeWindow);
+    return () => {
+      window.removeEventListener('resize', handleResizeWindow);
+    };
   }, [cartItems, dish, isLoaded, items, param.id]);
 
   if (!dish) return null;
@@ -45,9 +53,7 @@ const Dish = () => {
   };
 
   const onClick = (obj) => {
-    const findItem = makeTasty.some(
-      (item) => Number(item.id) === Number(obj.id)
-    );
+    const findItem = makeTasty.some((item) => Number(item.id) === Number(obj.id));
     if (findItem) {
       setMakeTasty(makeTasty.filter((item) => item.id !== obj.id));
     } else {
@@ -60,20 +66,19 @@ const Dish = () => {
   };
 
   return (
-    <DishContext.Provider
-      value={{ param, dish, makeTasty, isLoaded, isClicked, onPlus, onClick }}
-    >
+    <DishContext.Provider value={{ param, dish, makeTasty, isLoaded, isClicked, onPlus, onClick }}>
       <div className={styles.wrapper}>
         <NavigationMenu />
         <div className={styles.container}>
           <Categories />
           <div className={styles.content}>
-            <ImgBlock />
+            {width > breakpoint && <ImgBlock />}
             <div className={styles.content__dish_info}>
               <div className={styles.content__dish_info__title}>
                 <h1>{dish.title}</h1>
               </div>
               <div className={styles.line} />
+              {width <= breakpoint && <ImgBlock />}
               <div className={styles.content__dish_info__price_block}>
                 <DishPrice />
                 <div className={styles.line} />
