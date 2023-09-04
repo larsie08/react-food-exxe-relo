@@ -2,14 +2,17 @@
   display: flex;
   flex-direction: column;
   margin-top: 150px;
+  color: var(--body_color);
 
   &__header {
     display: flex;
+    align-items: center;
     margin-bottom: 60px;
 
     .block__header {
       font-size: 20px;
       text-transform: uppercase;
+      color: var(--body_color);
       line-height: 140%;
       font-weight: 700;
       margin-right: 30px;
@@ -22,6 +25,7 @@
 
     h1 {
       margin: 0 150px;
+      color: var(--body_color);
       font-size: 64px;
       line-height: 120%;
       font-weight: 700;
@@ -31,6 +35,10 @@
       font-size: 18px;
       line-height: 140%;
       font-weight: 400;
+
+      p {
+        color: var(--body_color);
+      }
     }
   }
 
@@ -62,19 +70,20 @@
       }
       .btn__right {
         padding: 15px 30px;
-        border: 1px solid rgba(51, 51, 51, 0.2);
+        border: 1px solid var(--body_color);
 
         a {
           text-decoration: none;
-          color: black;
+          color: var(--body_color);
         }
       }
     }
   }
 
   .line {
-    display: inline-flex;
-    align-items: center;
+    height: 3px;
+    width: 60px;
+    border: 2px solid #b59571;
   }
 }
 

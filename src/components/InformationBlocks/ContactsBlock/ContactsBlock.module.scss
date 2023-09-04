@@ -6,7 +6,12 @@
 
   &__header {
     display: flex;
+    align-items: center;
     margin-bottom: 80px;
+
+    h1 {
+      color: var(--body_color);
+    }
   }
 
   .block__header {
@@ -18,8 +23,9 @@
   }
 
   .line {
-    display: inline-flex;
-    align-items: center;
+    height: 3px;
+    width: 60px;
+    border: 2px solid #b59571;
   }
 
   &__content {
@@ -69,6 +75,7 @@
     }
 
     p {
+      color: var(--body_color);
       font-weight: 400;
       font-size: 18px;
       line-height: 140%;

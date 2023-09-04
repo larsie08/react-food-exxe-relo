@@ -5,7 +5,12 @@
 
   &__header {
     display: flex;
+    align-items: center;
     margin-bottom: 60px;
+
+    h1 {
+      color: var(--body_color);
+    }
 
     .block__header {
       font-size: 20px;
@@ -22,6 +27,7 @@
 
     h1 {
       margin: 0 150px;
+      color: var(--body_color);
       font-size: 64px;
       line-height: 120%;
       font-weight: 700;
@@ -31,12 +37,17 @@
       font-size: 18px;
       line-height: 140%;
       font-weight: 400;
+
+      p {
+        color: var(--body_color);
+      }
     }
   }
 
   .line {
-    display: inline-flex;
-    align-items: center;
+    height: 3px;
+    width: 60px;
+    border: 2px solid #b59571;
   }
 }
 

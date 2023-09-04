@@ -16,10 +16,10 @@ const Navigation = () => {
           <Link to='menu'>Меню</Link>
         </li>
         <li className={styles.nav__link}>
-          <a href='/'>Доставка</a>
+          <Link to='/'>Доставка</Link>
         </li>
         <li className={styles.nav__link}>
-          <a href='/'>Оплата</a>
+          <Link to='/'>Оплата</Link>
         </li>
         <li onClick={() => setIsOpenModal(true)} className={styles.nav__link}>
           <button className={styles.active}>Бронь столика</button>

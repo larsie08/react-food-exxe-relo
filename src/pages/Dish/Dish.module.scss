@@ -1,4 +1,6 @@
 .wrapper {
+  background-color: var(--body_background);
+
   .container {
     margin: 0 auto;
     width: 80%;
@@ -16,6 +18,7 @@
         max-width: 340px;
 
         &__title {
+          color: var(--body_color);
           text-align: center;
           margin-bottom: 35px;
 
@@ -36,7 +39,7 @@
   }
 
   .line {
-    border: 1px solid rgba(128, 128, 128, 0.4);
+    border: 1px solid var(--body_color);
     width: 100%;
   }
 }

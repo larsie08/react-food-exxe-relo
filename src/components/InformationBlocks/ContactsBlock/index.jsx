@@ -12,7 +12,6 @@ const ContactsBlock = () => {
       <div className={styles.contacts__header}>
         <h1 className={styles.block__header}>контакты</h1>
         <div className={styles.line}>
-          <img alt="underline" src="./img/underline.webp" />
         </div>
       </div>
 

@@ -8,7 +8,7 @@ const AboutBlock = () => {
       <div className={styles.about__header}>
         <h1 className={styles.block__header}>о ресторане</h1>
         <div className={styles.line}>
-          <img alt="underline" src="./img/underline.webp" />
+          
         </div>
       </div>
       <div className={styles.about__content}>

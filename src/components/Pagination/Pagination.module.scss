@@ -12,11 +12,11 @@
       width: 45px;
       height: 45px;
       line-height: 42px;
-      border: 1px solid black;
+      border: 1px solid var(--body_color);
       border-radius: 30px;
       margin-right: 10px;
       cursor: pointer;
-      color: black;
+      color: var(--body_color);
 
       &:hover {
         background-color: #fe5f1e;

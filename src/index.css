@@ -6,9 +6,24 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 * {
   box-sizing: border-box;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+:root {
+  --body_background: white;
+  --body_color: black;
+}
+
+[data-theme="dark"] {
+  --body_background: #191a19;
+  --body_color: white;
+  --body_border_opacity: 0.2;
 }

@@ -13,13 +13,21 @@
       align-items: center;
       gap: 15px;
 
+      svg {
+        cursor: pointer;
+
+        path {
+          fill: var(--body_color);
+        }
+      }
+
       a {
         display: flex;
         font-size: 16px;
         line-height: 140%;
         font-weight: 400;
         text-decoration: none;
-        color: black;
+        color: var(--body_color);
       }
     }
 
@@ -27,9 +35,17 @@
       display: flex;
       align-items: center;
       gap: 15px;
-      
-      a {
-        display: flex;
+
+      span {
+        color: var(--body_color);
+      }
+
+      svg {
+        cursor: pointer;
+
+        path {
+          fill: var(--body_color);
+        }
       }
     }
   }
