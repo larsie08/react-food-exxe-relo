@@ -21,7 +21,9 @@ function App() {
   const [items, setItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const [isDarkTheme, setIsDarkTheme] = useState(
+    JSON.parse(localStorage.getItem("theme"))
+  );
 
   useEffect(() => {
     async function fetchData() {
@@ -88,11 +90,19 @@ function App() {
   useEffect(() => {
     const body = document.querySelector("body");
     body.style.overflow = isOpenModal || isOpenBurger ? "hidden" : "auto";
+  }, [isOpenModal, isOpenBurger]);
 
-    isDarkTheme
-      ? body.setAttribute("data-theme", "dark")
-      : body.removeAttribute("data-theme", "dark");
-  }, [isOpenModal, isOpenBurger, isDarkTheme]);
+  useEffect(() => {
+    const body = document.querySelector("body");
+
+    if (isDarkTheme) {
+      body.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", isDarkTheme);
+    } else {
+      body.setAttribute("data-theme", "ligth");
+      localStorage.setItem("theme", isDarkTheme);
+    }
+  }, [isDarkTheme]);
 
   return (
     <AppContext.Provider

@@ -1,0 +1,122 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+
+.theme_toogle {
+  --size: 32px;
+  --icon-fill: hsl(210 10% 30%);
+  --icon-fill-hover: hsl(210 10% 15%);
+
+  [data-theme="dark"] & {
+    --icon-fill: hsl(210 10% 70%);
+    --icon-fill-hover: hsl(210 15% 90%);
+  }
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+
+  outline-offset: 5px;
+
+  & > svg {
+    inline-size: 100%;
+    block-size: 100%;
+    stroke-linecap: round;
+  }
+
+  @media (hover: none) {
+    --size: 48px;
+  }
+}
+
+.sun_and_moon {
+  & > :is(.moon, .sun, .sun_beams) {
+    transform-origin: center center;
+  }
+
+  & > :is(.moon, .sun) {
+    fill: var(--icon-fill);
+
+    .theme_toggle:is(:hover, :focus-visible) > & {
+      fill: var(--icon-fill-hover);
+    }
+  }
+
+  & > .sun_beams {
+    stroke: var(--icon-fill);
+    stroke-width: 2px;
+
+    .theme_toggle:is(:hover, :focus-visible) & {
+      stroke: var(--icon-fill-hover);
+    }
+  }
+
+  [data-theme="dark"] & {
+    & > .sun {
+      transform: scale(1.75);
+    }
+
+    & > .sun_beams {
+      opacity: 0;
+    }
+
+    & > .moon > circle {
+      transform: translateX(-7px);
+      transition: transform 0.25s var(--ease-out-5);
+
+      @supports (cx: 1) {
+        transform: translateX(0);
+        cx: 17;
+        transition: cx 0.25s var(--ease-out-5);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    & > .sun {
+      transition: transform 0.5s var(--ease-elastic-3);
+    }
+
+    & > .sun_beams {
+      transition:
+        transform 0.5s var(--ease-elastic-4),
+        opacity 0.5s var(--ease-3);
+    }
+
+    & .moon > circle {
+      transform: translateX(-7px);
+      transition: transform 0.25s var(--ease-out-5);
+
+      @supports (cx: 1) {
+        transform: translateX(0);
+        cx: 17;
+        transition: cx 0.25s var(--ease-out-5);
+      }
+    }
+
+    [data-theme="dark"] & {
+      & > .sun {
+        transform: scale(1.75);
+        transition-timing-function: var(--ease-3);
+        transition-duration: 0.25s;
+      }
+
+      & > .sun_beams {
+        transform: rotateZ(-25deg);
+        transition-duration: 0.15s;
+      }
+
+      & > .moon > circle {
+        transition-delay: 0.25s;
+        transition-duration: 0.5s;
+      }
+    }
+  }
+}

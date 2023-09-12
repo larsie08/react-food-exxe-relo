@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { AppContext } from "../../App";
 
 import styles from "./Sidebar.module.scss";
+import ThemeButton from "./ThemeButton";
 
 const Sidebar = () => {
-  const { setIsOpenBurger, setIsDarkTheme, isDarkTheme } = React.useContext(AppContext);
+  const { setIsOpenBurger } = useContext(AppContext);
 
   return (
     <aside className={styles.sidebar}>
@@ -22,16 +23,10 @@ const Sidebar = () => {
         >
           <img alt="icons" src="./img/gg_menu-left.png" />
         </li>
+        <li className={styles.switch_button}>
+          <ThemeButton />
+        </li>
       </ul>
-
-      <form>
-        <input
-          type="checkbox"
-          id="darkmode-toggle"
-          onChange={() => setIsDarkTheme(!isDarkTheme)}
-        />
-        <label htmlFor="darkmode-toggle" />
-      </form>
 
       <ul className={styles.sidebar_content__footer}>
         <li>
