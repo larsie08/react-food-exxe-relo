@@ -13,11 +13,12 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 290px);
+    grid-template-rows: 460px;
     gap: 24px;
   }
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1550px) {
   .food_card__wrapper {
     grid-template-columns: repeat(3, 290px) !important;
   }
@@ -66,11 +67,13 @@
 @media (max-width: 380px) {
   .food_card__wrapper {
     grid-template-columns: 250px !important;
+    grid-template-rows: 425px !important;
   }
 }
 
 @media (max-width: 330px) {
   .food_card__wrapper {
     grid-template-columns: 220px !important;
+    grid-template-rows: 400px !important;
   }
 }

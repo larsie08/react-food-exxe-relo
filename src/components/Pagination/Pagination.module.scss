@@ -19,7 +19,7 @@
       color: var(--body_color);
 
       &:hover {
-        background-color: #fe5f1e;
+        background-color: #b59571;
         color: #fff;
       }
     }
@@ -28,7 +28,7 @@
   :global {
     .selected {
       a {
-        background-color: #fe5f1e;
+        background-color: #b59571;
         color: #fff;
       }
     }

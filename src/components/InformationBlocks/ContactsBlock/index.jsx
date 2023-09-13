@@ -50,7 +50,7 @@ const ContactsBlock = () => {
               <p>
                 из аэропорта
                 <br />
-                пулково
+                Пулково
               </p>
             </div>
             <div className={styles.contacts__block}>

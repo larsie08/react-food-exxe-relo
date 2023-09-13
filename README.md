@@ -14,8 +14,6 @@
 ## To-Do:
 
 - React Skeleton
-- Modify the adaptive
-- Theme toogle
 
 ## Installation
 

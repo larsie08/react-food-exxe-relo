@@ -5,12 +5,15 @@ import Footer from "../../components/Footer";
 
 import styles from "./EmptyPage.module.scss";
 import ContactsBlock from "../../components/InformationBlocks/ContactsBlock";
+import Categories from "../../components/MenuComponents/Categories";
 
 const EmptyPage = () => {
   return (
     <div className={styles.wrapper}>
       <NavigationMenu />
       <div className={styles.container}>
+        <Categories />
+
         <div className={styles.content}>
           <h1>
             <span>:(</span>

@@ -20,11 +20,12 @@ code {
 
 :root {
   --body_background: white;
+  --body_border_color: 0, 0, 0;
   --body_color: black;
 }
 
 [data-theme="dark"] {
-  --body_background: #191a19;
+  --body_background: #1f1f20;
+  --body_border_color: 255, 255, 255;
   --body_color: white;
-  --body_border_opacity: 0.2;
 }

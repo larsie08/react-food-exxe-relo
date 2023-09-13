@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
 import { AppContext } from "../../../App";
 
@@ -6,6 +6,13 @@ import styles from "./ThemeButton.module.scss";
 
 const ThemeButton = () => {
   const { setIsDarkTheme, isDarkTheme } = useContext(AppContext);
+
+  const mask = (
+    <mask className={styles.moon} id="moon-mask">
+      <rect x="0" y="0" width="100%" height="100%" fill="white" />
+      <circle cx="24" cy="10" r="6" fill="black" />
+    </mask>
+  );
 
   return (
     <button
@@ -22,12 +29,7 @@ const ThemeButton = () => {
         height="24"
         viewBox="0 0 24 24"
       >
-        {isDarkTheme ? (
-          <mask className={styles.moon} id="moon-mask">
-            <rect x="0" y="0" width="100%" height="100%" fill="white" />
-            <circle cx="24" cy="10" r="6" fill="black" />
-          </mask>
-        ) : null}
+        {isDarkTheme ? mask : null}
 
         <circle
           className={styles.sun}

@@ -15,16 +15,15 @@
       padding-bottom: 5px;
       border-bottom: 3px solid transparent;
       cursor: pointer;
+      transition: all ease-in-out 0.2s;
 
       &__active {
         border-color: rgb(181, 149, 113);
-        transition: border-color ease 0.2s;
       }
     }
 
-    &__btn:hover {
+    &__btn:hover:not(.categories__content__btn__active) {
       border-color: rgba(181, 149, 113, 0.4);
-      transition: border-color ease 0.2s;
     }
   }
 }
