@@ -27,6 +27,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true)
     async function fetchData() {
       try {
         const itemsResponse = await axios.get(
