@@ -1,19 +1,23 @@
-import React from 'react';
+import React from "react";
 
-import styles from './Home.module.scss';
+import styles from "./Home.module.scss";
 
-import Navigation from '../../components/Navigation';
-import AboutBlock from '../../components/InformationBlocks/AboutBlock';
-import MenuBlock from '../../components/InformationBlocks/MenuBlock';
-import DeliveryBlock from '../../components/InformationBlocks/DeliveryBlock';
-import ContactsBlock from '../../components/InformationBlocks/ContactsBlock';
-import Footer from '../../components/Footer';
+import Navigation from "../../components/Navigation";
+import AboutBlock from "../../components/InformationBlocks/AboutBlock";
+import MenuBlock from "../../components/InformationBlocks/MenuBlock";
+import DeliveryBlock from "../../components/InformationBlocks/DeliveryBlock";
+import ContactsBlock from "../../components/InformationBlocks/ContactsBlock";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   return (
     <div className={styles.wrapper}>
       <Navigation />
-      <img className={styles.intro} src="./img/intro.webp" alt="Видовой ресторан Food Exxe Relo" />
+      <img
+        className={styles.intro}
+        src="./img/intro.webp"
+        alt="Видовой ресторан Food Exxe Relo"
+      />
       <div className={styles.container}>
         <div className={styles.main}>
           <h1 className={styles.main__title}>

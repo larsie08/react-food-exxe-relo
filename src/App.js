@@ -24,6 +24,7 @@ function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(
     JSON.parse(localStorage.getItem("theme"))
   );
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -37,6 +38,7 @@ function App() {
 
         setItems(itemsResponse.data);
         setCartItems(cartResponse.data);
+        setIsLoading(false);
       } catch (error) {
         alert("Ошибка при запросе данных ;(");
         console.error(error);
@@ -90,10 +92,6 @@ function App() {
   useEffect(() => {
     const body = document.querySelector("body");
     body.style.overflow = isOpenModal || isOpenBurger ? "hidden" : "auto";
-  }, [isOpenModal, isOpenBurger]);
-
-  useEffect(() => {
-    const body = document.querySelector("body");
 
     if (isDarkTheme) {
       body.setAttribute("data-theme", "dark");
@@ -102,7 +100,7 @@ function App() {
       body.setAttribute("data-theme", "ligth");
       localStorage.setItem("theme", isDarkTheme);
     }
-  }, [isDarkTheme]);
+  }, [isOpenModal, isOpenBurger, isDarkTheme]);
 
   return (
     <AppContext.Provider
@@ -121,6 +119,7 @@ function App() {
         setCurrentPage,
         setIsDarkTheme,
         isDarkTheme,
+        isLoading,
       }}
     >
       <Sidebar />
