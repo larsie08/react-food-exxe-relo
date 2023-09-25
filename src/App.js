@@ -26,7 +26,7 @@ function App() {
   );
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    // setIsLoading(true);
+    setIsLoading(true);
     async function fetchData() {
       try {
         const itemsResponse = await axios.get(
@@ -38,7 +38,7 @@ function App() {
 
         setItems(itemsResponse.data);
         setCartItems(cartResponse.data);
-        // setIsLoading(false);
+        setIsLoading(false);
       } catch (error) {
         alert("Ошибка при запросе данных ;(");
         console.error(error);

@@ -7,9 +7,12 @@
 1. React
 2. React Router
 3. React-Hooks
-4. Axios
+4. Axios + Fetch 
 5. PropTypes
-6. SCSS
+6. SCSS / CSS-Modules
+7. React Content Loader
+8. Prettier 
+9. React Pagination 
 
 ## Installation
 
