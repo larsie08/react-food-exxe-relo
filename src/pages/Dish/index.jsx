@@ -10,14 +10,15 @@ import ImgBlock from "../../components/DishComponents/ImgBlock";
 import MakeTastyBlock from "../../components/DishComponents/MakeTastyBlock";
 import ContactsBlock from "../../components/InformationBlocks/ContactsBlock";
 import DishPrice from "../../components/DishComponents/DishPrice";
+import DishSkeletonPage from "../DishSkeletonPage"
 
 import styles from "./Dish.module.scss";
-import axios from "axios";
 
 export const DishContext = React.createContext();
 
 const Dish = () => {
-  const { items, onAddToCart, cartItems } = useContext(AppContext);
+  const { items, onAddToCart, cartItems, isLoading, setIsLoading } =
+    useContext(AppContext);
 
   const [makeTasty, setMakeTasty] = useState([]);
   const [dish, setDish] = useState();
@@ -37,6 +38,7 @@ const Dish = () => {
     } else {
       setDish(items.find((item) => Number(item.id) === Number(param.id)));
     }
+    setIsLoading(false);
 
     const handleResizeWindow = () => setWidth(window.innerWidth);
 
@@ -46,7 +48,7 @@ const Dish = () => {
     };
   }, [cartItems, dish, items, param.id]);
 
-  if (!dish) return null;
+  if (!dish) return <DishSkeletonPage />;
 
   const onPlus = (obj) => {
     onAddToCart(obj);

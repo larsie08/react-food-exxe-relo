@@ -11,10 +11,6 @@
 5. PropTypes
 6. SCSS
 
-## To-Do:
-
-- React Skeleton
-
 ## Installation
 
 ```

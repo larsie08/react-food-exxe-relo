@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import ContentLoader from "react-content-loader";
 
 import styles from "./MenuSkeleton.module.scss";
+
 import { AppContext } from "../../../App";
 
 const MenuSkeleton = () => {
@@ -20,7 +21,7 @@ const MenuSkeleton = () => {
       <rect className={styles.image} y="0" x="0" rx="0" ry="0" />
       <rect className={styles.title} y="250" x="0" rx="0" ry="0" />
       <rect className={styles.price} y="360" x="0" rx="0" ry="0" />
-      <rect x="170" y="359" rx="0" ry="0" width="120" height="45" />
+      <rect x="170" y="360" rx="0" ry="0" width="120" height="45" />
     </ContentLoader>
   );
 };

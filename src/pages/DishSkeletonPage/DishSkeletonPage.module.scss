@@ -1,0 +1,86 @@
+.wrapper {
+  background-color: var(--body_background);
+
+  .container {
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    max-width: 1300px;
+
+    .content {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 80px;
+
+      &__dish_info {
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+
+        &__title {
+          max-height: 60px;
+          margin-bottom: 35px;
+        }
+
+        &__price_block {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .skeleton__title_content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .title {
+    width: 100%;
+    height: 100%;
+  }
+
+  .line {
+    border: 1px solid var(--body_color);
+    width: 100%;
+  }
+
+  .make_tasty_block {
+    width: 100%;
+
+    .make_tasty_block__title {
+      width: 100%;
+      height: 50px;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .container {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin-left: 80px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin-left: 60px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .content__dish_info__title {
+    h1 {
+      font-size: 26px !important;
+    }
+  }
+
+  .content__dish_info {
+    max-width: 260px !important;
+  }
+}

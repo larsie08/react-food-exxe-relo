@@ -22,7 +22,7 @@
       }
 
       a {
-        display: flex;
+        white-space: pre;
         font-size: 16px;
         line-height: 140%;
         font-weight: 400;
@@ -60,5 +60,18 @@
 @media (max-width: 370px) {
   .header {
     padding: 20px 10px 0 0;
+  }
+}
+
+@media (max-width: 335px) {
+  .header {
+    justify-content: center;
+    margin-left: 60px;
+  }
+
+  .header__content {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
   }
 }

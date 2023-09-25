@@ -1,0 +1,25 @@
+.wrapper {
+    width: 100%;
+}
+
+.make_tasty_block {
+  width: 100%;
+  height: 550px;
+
+  .make_tasty_block__title {
+    width: 100%;
+    height: 50px;
+  }
+  .make_tasty_block__content {
+    width: 70%;
+    height: 15px;
+  }
+  .make_tasty_block__price {
+    width: 30%;
+    height: 25px;
+  }
+  .make_tasty_block__button {
+    width: 24px;
+    height: 24px;
+  }
+}
