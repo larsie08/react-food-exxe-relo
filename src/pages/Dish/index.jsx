@@ -10,16 +10,15 @@ import ImgBlock from "../../components/DishComponents/ImgBlock";
 import MakeTastyBlock from "../../components/DishComponents/MakeTastyBlock";
 import ContactsBlock from "../../components/InformationBlocks/ContactsBlock";
 import DishPrice from "../../components/DishComponents/DishPrice";
-import DishSkeletonPage from "../DishSkeletonPage"
+import DishSkeletonPage from "../DishSkeletonPage";
 
 import styles from "./Dish.module.scss";
+import axios from "axios";
 
 export const DishContext = React.createContext();
 
 const Dish = () => {
-  const { items, onAddToCart, cartItems, isLoading, setIsLoading } =
-    useContext(AppContext);
-
+  const { onAddToCart, cartItems } = useContext(AppContext);
   const [makeTasty, setMakeTasty] = useState([]);
   const [dish, setDish] = useState();
   const [width, setWidth] = useState(window.innerWidth);
@@ -36,9 +35,19 @@ const Dish = () => {
       setDish(findItem);
       setMakeTasty(findItem.makeTastyId);
     } else {
-      setDish(items.find((item) => Number(item.id) === Number(param.id)));
+      async function fetchDish() {
+        try {
+          const { data } = await axios.get(
+            `https://64c180cafa35860baea09f01.mockapi.io/items/${param.id}`
+          );
+          setDish(data);
+        } catch (error) {
+          alert("Не удалось получить блюдо");
+          console.log(error);
+        }
+      }
+      fetchDish();
     }
-    setIsLoading(false);
 
     const handleResizeWindow = () => setWidth(window.innerWidth);
 
@@ -46,7 +55,7 @@ const Dish = () => {
     return () => {
       window.removeEventListener("resize", handleResizeWindow);
     };
-  }, [cartItems, dish, items, param.id]);
+  }, [cartItems, param]);
 
   if (!dish) return <DishSkeletonPage />;
 

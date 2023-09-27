@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import ReactPaginate from 'react-paginate';
+import React, { useContext } from "react";
+import ReactPaginate from "react-paginate";
 
-import { AppContext } from '../../App';
+import { AppContext } from "../../App";
 
-import styles from './Pagination.module.scss';
+import styles from "./Pagination.module.scss";
 
 const Pagination = () => {
   const { setCurrentPage } = useContext(AppContext);
@@ -15,7 +15,6 @@ const Pagination = () => {
       nextLabel=">"
       previousLabel="<"
       onPageChange={(event) => setCurrentPage(event.selected + 1)}
-      pageRangeDisplayed={4}
       pageCount={3}
       renderOnZeroPageCount={null}
     />

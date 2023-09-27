@@ -117,6 +117,7 @@ function App() {
         itemIsAdded,
         onAddToCart,
         setCurrentPage,
+        currentPage,
         setIsDarkTheme,
         isDarkTheme,
         isLoading,
