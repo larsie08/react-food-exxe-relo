@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import axios from "axios";
+
 import { AppContext } from "../../App";
 
 import NavigationMenu from "../../components/MenuComponents/NavigationMenu";
@@ -13,7 +15,6 @@ import DishPrice from "../../components/DishComponents/DishPrice";
 import DishSkeletonPage from "../DishSkeletonPage";
 
 import styles from "./Dish.module.scss";
-import axios from "axios";
 
 export const DishContext = React.createContext();
 

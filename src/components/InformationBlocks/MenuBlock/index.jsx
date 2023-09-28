@@ -32,16 +32,22 @@ const MenuBlock = () => {
             </Link>
           </div>
           <div className={styles.block__footer}>
-            <h1 className={styles.block__header}>Основное меню</h1>
+            <Link to="menu" className={styles.block__header}>
+              Основное меню
+            </Link>
             <div className={styles.line} />
           </div>
         </div>
         <div className={styles.menu__block}>
           <div className={styles.block__img}>
-            <img alt="bar_card" src="./img/menu_2.webp" />
+            <Link to="*">
+              <img alt="bar_card" src="./img/menu_2.webp" />
+            </Link>
           </div>
           <div className={styles.block__footer}>
-            <h1 className={styles.block__header}>Барная карта</h1>
+            <Link to="*" className={styles.block__header}>
+              Барная карта
+            </Link>
             <div className={styles.line} />
           </div>
         </div>

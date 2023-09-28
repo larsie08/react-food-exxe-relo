@@ -6,6 +6,13 @@ import styles from "./MakeTastySkeletonBlock.module.scss";
 
 import { AppContext } from "../../../../App";
 
+const skeletons = [
+  { content: 115, price: 155, button: 135 },
+  { content: 215, price: 255, button: 235 },
+  { content: 315, price: 355, button: 335 },
+  { content: 415, price: 455, button: 435 },
+];
+
 const MakeTastySkeletonBlock = () => {
   const { isDarkTheme } = useContext(AppContext);
 
@@ -24,90 +31,33 @@ const MakeTastySkeletonBlock = () => {
           rx="0"
           ry="0"
         />
-        <rect
-          className={styles.make_tasty_block__content}
-          x="0"
-          y="115"
-          rx="0"
-          ry="0"
-        />
-        <rect
-          className={styles.make_tasty_block__price}
-          x="0"
-          y="155"
-          rx="0"
-          ry="0"
-        />
-        <rect
-          className={styles.make_tasty_block__button}
-          x="315"
-          y="135"
-          rx="0"
-          ry="0"
-        />
-        <rect
-          className={styles.make_tasty_block__content}
-          x="0"
-          y="215"
-          rx="0"
-          ry="0"
-        />
-        <rect
-          className={styles.make_tasty_block__price}
-          x="0"
-          y="255"
-          rx="0"
-          ry="0"
-        />
-        <rect
-          className={styles.make_tasty_block__button}
-          x="315"
-          y="235"
-          rx="0"
-          ry="0"
-        />
-        <rect
-          className={styles.make_tasty_block__content}
-          x="0"
-          y="315"
-          rx="0"
-          ry="0"
-        />
-        <rect
-          className={styles.make_tasty_block__price}
-          x="0"
-          y="355"
-          rx="0"
-          ry="0"
-        />
-        <rect
-          className={styles.make_tasty_block__button}
-          x="315"
-          y="335"
-          rx="0"
-          ry="0"
-        />
-        <rect
-          className={styles.make_tasty_block__content}
-          x="0"
-          y="415"
-          rx="0"
-          ry="0"
-        />
-        <rect
-          className={styles.make_tasty_block__price}
-          x="0"
-          y="455"
-          rx="0"
-          ry="0"
-        />
-        <rect
-          className={styles.make_tasty_block__button}
-          x="315"
-          y="435"
-          rx="0"
-          ry="0"
-        />
+
+        {skeletons.map((item, id) => (
+          <>
+            <rect
+              className={styles.make_tasty_block__content}
+              key={id}
+              x="0"
+              y={item.content}
+              rx="0"
+              ry="0"
+            />
+            <rect
+              className={styles.make_tasty_block__price}
+              x="0"
+              y={item.price}
+              rx="0"
+              ry="0"
+            />
+            <rect
+              className={styles.make_tasty_block__button}
+              x="315"
+              y={item.button}
+              rx="0"
+              ry="0"
+            />
+          </>
+        ))}
       </ContentLoader>
     </div>
   );

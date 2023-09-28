@@ -21,7 +21,7 @@ const Home = () => {
       <div className={styles.container}>
         <div className={styles.main}>
           <h1 className={styles.main__title}>
-            Видовой ресторан Food Exxe Relo <br /> на Крестовском острове
+            Видовой ресторан Food Exxe Relo на Крестовском острове
           </h1>
         </div>
         <AboutBlock />

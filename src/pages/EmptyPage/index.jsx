@@ -13,11 +13,9 @@ const EmptyPage = () => {
       <NavigationMenu />
       <div className={styles.container}>
         <Categories />
-
         <div className={styles.content}>
           <h1>
             <span>:(</span>
-            <br />
             Ничего не найдено
           </h1>
           <p className={styles.description}>

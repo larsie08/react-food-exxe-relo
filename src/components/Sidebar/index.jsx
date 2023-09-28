@@ -4,10 +4,16 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../../App";
 
 import styles from "./Sidebar.module.scss";
+
 import ThemeButton from "./ThemeButton";
+import FooterLinks from "../FooterLinks";
 
 const Sidebar = () => {
   const { setIsOpenBurger } = useContext(AppContext);
+
+  const onOpenModal = () => {
+    setIsOpenBurger(true);
+  };
 
   return (
     <aside className={styles.sidebar}>
@@ -17,10 +23,7 @@ const Sidebar = () => {
             <img alt="icons" src="./img/logo.webp" />
           </Link>
         </li>
-        <li
-          onClick={() => setIsOpenBurger(true)}
-          className={styles.sidebar__menu}
-        >
+        <li onClick={onOpenModal} className={styles.sidebar__menu}>
           <img alt="icons" src="./img/gg_menu-left.png" />
         </li>
         <li className={styles.switch_button}>
@@ -28,31 +31,9 @@ const Sidebar = () => {
         </li>
       </ul>
 
-      <ul className={styles.sidebar_content__footer}>
-        <li>
-          <Link
-            to="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            target="_blank"
-            className={styles.icons}
-          >
-            <img alt="icons" src="./img/yt-icons.webp" />
-          </Link>
-        </li>
-        <li>
-          <Link to="https://vk.com" target="_blank" className={styles.icons}>
-            <img alt="icons" src="./img/vk-icons.webp" />
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="https://telegram.org"
-            target="_blank"
-            className={styles.icons}
-          >
-            <img alt="icons" src="./img/tg-icons.webp" />
-          </Link>
-        </li>
-      </ul>
+      <div className={styles.sidebar_content__footer}>
+        <FooterLinks />
+      </div>
     </aside>
   );
 };

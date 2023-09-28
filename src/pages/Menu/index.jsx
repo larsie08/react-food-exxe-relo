@@ -33,9 +33,6 @@ const Menu = () => {
               : items.map((item, id) => (
                   <FoodCard key={id} id={item.id} {...item} />
                 ))}
-            {/* {items.map((item, id) => (
-              <FoodCard key={id} id={item.id} {...item} />
-            ))} */}
           </div>
           <Pagination />
           <ContactsBlock />

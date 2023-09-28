@@ -21,8 +21,13 @@
 
   .sidebar_content__footer {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 }
 

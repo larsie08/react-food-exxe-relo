@@ -1,23 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import styles from './Footer.module.scss';
+import styles from "./Footer.module.scss";
+
+const footerList = (
+  <ul className={styles.block_card}>
+    <li>
+      <img alt="visa" src="./img/visa-card.webp" />
+    </li>
+    <li>
+      <img alt="mir" src="./img/mir-card.webp" />
+    </li>
+    <li>
+      <img alt="master-card" src="./img/masterCard.webp" />
+    </li>
+  </ul>
+);
 
 const Footer = ({ renderMenu }) => {
-  const footerList = (
-    <ul className={styles.block_card}>
-      <li>
-        <img alt="visa" src="./img/visa-card.webp" />
-      </li>
-      <li>
-        <img alt="mir" src="./img/mir-card.webp" />
-      </li>
-      <li>
-        <img alt="master-card" src="./img/masterCard.webp" />
-      </li>
-    </ul>
-  );
-
   return (
     <footer className={styles.footer}>
       <ul>

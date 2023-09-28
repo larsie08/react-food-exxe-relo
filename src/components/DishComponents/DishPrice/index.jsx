@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from "react";
 
-import { AppContext } from '../../../App';
-import { DishContext } from '../../../pages/Dish';
+import { AppContext } from "../../../App";
+import { DishContext } from "../../../pages/Dish";
 
-import styles from './DishPrice.module.scss';
+import styles from "./DishPrice.module.scss";
 
 const DishPrice = () => {
   const { param, dish, makeTasty, onPlus } = useContext(DishContext);
@@ -19,14 +19,14 @@ const DishPrice = () => {
       } else if (makeTasty.length >= 1) {
         const result = makeTasty.reduce(
           (sum, item) => Number((sum += item.price)),
-          Number(dish.price),
+          Number(dish.price)
         );
         setDishPrice(result * counterValue);
       } else {
         setDishPrice(dish.price * counterValue);
       }
     } catch (error) {
-      alert('Не удалось вывести цену');
+      alert("Не удалось вывести цену");
       console.error(error);
     }
   }, [counterValue, dish.isCart, dish.price, dishPrice, makeTasty]);
@@ -59,7 +59,7 @@ const DishPrice = () => {
   };
 
   const decrease = () => {
-    if (counterValue === 0) return;
+    if (counterValue === 1) return;
     setCounterValue((count) => count - 1);
   };
 
@@ -93,16 +93,26 @@ const DishPrice = () => {
                 width="18"
                 height="36"
                 viewBox="0 0 11 24"
-                fill="none">
-                <path onClick={increase} d="M5.5 0.5L11 9.5H0L5.5 0.5Z" fill="#B59571" />
-                <path onClick={decrease} d="M5.5 23.5L11 14.5H0L5.5 23.5Z" fill="#B59571" />
+                fill="none"
+              >
+                <path
+                  onClick={increase}
+                  d="M5.5 0.5L11 9.5H0L5.5 0.5Z"
+                  fill="#B59571"
+                />
+                <path
+                  onClick={decrease}
+                  d="M5.5 23.5L11 14.5H0L5.5 23.5Z"
+                  fill="#B59571"
+                />
               </svg>
             </div>
           </div>
           <button
             onClick={isClicked}
-            className={itemIsAdded(dish.parentId) ? styles.active_btn : ''}>
-            {itemIsAdded(dish.parentId) ? 'В корзине' : 'В корзину'}
+            className={itemIsAdded(dish.parentId) ? styles.active_btn : ""}
+          >
+            {itemIsAdded(dish.parentId) ? "В корзине" : "В корзину"}
           </button>
         </div>
       </div>

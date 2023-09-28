@@ -1,4 +1,6 @@
 .wrapper {
+  background-color: var(--body_background);
+
   .container {
     margin: 0 auto;
     width: 80%;
@@ -10,6 +12,12 @@
       flex-direction: column;
       align-items: center;
       margin-top: 100px;
+
+      h1,
+      p,
+      span {
+        color: var(--body_color);
+      }
 
       span {
         display: flex;

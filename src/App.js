@@ -9,8 +9,8 @@ import Dish from "./pages/Dish";
 import EmptyPage from "./pages/EmptyPage";
 
 import Sidebar from "./components/Sidebar";
-import Reserve from "./components/Reserve";
-import MenuBurger from "./components/MenuBurger";
+import Reserve from "./components/Modal/Reserve";
+import MenuBurger from "./components/Modal/MenuBurger";
 
 export const AppContext = React.createContext();
 
@@ -25,6 +25,7 @@ function App() {
     JSON.parse(localStorage.getItem("theme"))
   );
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     setIsLoading(true);
     async function fetchData() {
@@ -91,7 +92,12 @@ function App() {
 
   useEffect(() => {
     const body = document.querySelector("body");
+
     body.style.overflow = isOpenModal || isOpenBurger ? "hidden" : "auto";
+  }, [isOpenModal, isOpenBurger]);
+
+  useEffect(() => {
+    const body = document.querySelector("body");
 
     if (isDarkTheme) {
       body.setAttribute("data-theme", "dark");
@@ -100,7 +106,7 @@ function App() {
       body.setAttribute("data-theme", "ligth");
       localStorage.setItem("theme", isDarkTheme);
     }
-  }, [isOpenModal, isOpenBurger, isDarkTheme]);
+  }, [isDarkTheme]);
 
   return (
     <AppContext.Provider
