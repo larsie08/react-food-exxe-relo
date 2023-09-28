@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 
 import classNames from "classnames";
 
-import FooterLinks from "../../FooterLinks";
+import Links from "../../Links";
 
 import { AppContext } from "../../../App";
 
@@ -77,7 +77,7 @@ const MenuBurger = () => {
         </div>
 
         <div className={styles.menu_burger__content__footer}>
-          <FooterLinks />
+          <Links />
         </div>
       </div>
     </div>,

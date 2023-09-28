@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import ThemeButton from "./ThemeButton";
+import Links from "../Links";
+
 import { AppContext } from "../../App";
 
 import styles from "./Sidebar.module.scss";
-
-import ThemeButton from "./ThemeButton";
-import FooterLinks from "../FooterLinks";
 
 const Sidebar = () => {
   const { setIsOpenBurger } = useContext(AppContext);
@@ -32,7 +32,7 @@ const Sidebar = () => {
       </ul>
 
       <div className={styles.sidebar_content__footer}>
-        <FooterLinks />
+        <Links />
       </div>
     </aside>
   );

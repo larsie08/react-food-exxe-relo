@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-const FooterLinks = () => {
+const Links = () => {
   return (
     <ul>
       <li>
@@ -24,4 +24,4 @@ const FooterLinks = () => {
   );
 };
 
-export default FooterLinks;
+export default Links;
