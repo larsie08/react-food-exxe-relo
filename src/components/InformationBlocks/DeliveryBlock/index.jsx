@@ -33,16 +33,12 @@ const DeliveryBlock = () => {
       </div>
       <div className={styles.delivery__footer}>
         <ul className={styles.delivery__footer__btn}>
-          <li className={styles.btn__left}>
-            <Link to="*" className={styles.btn}>
-              Подробнее
-            </Link>
-          </li>
-          <li className={styles.btn__right}>
-            <Link to="*" className={styles.btn}>
-              Условия доставки
-            </Link>
-          </li>
+          <Link to="*" className={styles.btn__left}>
+            Подробнее
+          </Link>
+          <Link to="*" className={styles.btn__right}>
+            Условия доставки
+          </Link>
         </ul>
       </div>
     </div>

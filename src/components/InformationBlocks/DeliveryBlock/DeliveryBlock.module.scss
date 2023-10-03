@@ -70,19 +70,12 @@
       .btn__left {
         padding: 15px 30px;
         background-color: #b59571;
-
-        a {
-          background-color: #b59571;
-          color: white;
-        }
+        color: white;
       }
       .btn__right {
         padding: 15px 30px;
         border: 1px solid var(--body_color);
-
-        a {
-          color: var(--body_color);
-        }
+        color: var(--body_color);
       }
     }
   }

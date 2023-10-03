@@ -151,12 +151,14 @@
         .list__btn__right {
           border: 1px solid #ffffff;
           padding: 10px 20px;
+          text-decoration: none;
+          color: white;
           margin: 0;
           cursor: pointer;
 
-          button {
-            background-color: #5b5b5b;
-          }
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 140%;
         }
       }
     }

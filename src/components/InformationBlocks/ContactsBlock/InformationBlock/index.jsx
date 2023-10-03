@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { AppContext } from "../../../../App";
 
@@ -42,9 +43,9 @@ const InformationBlock = () => {
             <li onClick={onOpenModal} className={styles.list__btn__left}>
               <button className={styles.active_btn}>Бронь столика</button>
             </li>
-            <li className={styles.list__btn__right}>
-              <button>Задать вопрос</button>
-            </li>
+            <Link to="*" className={styles.list__btn__right}>
+              Задать вопрос
+            </Link>
           </ul>
         </div>
       </div>
